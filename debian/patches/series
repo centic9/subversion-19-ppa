@@ -1,0 +1,15 @@
+build-fixes
+last-changed-date-charset
+no-extra-libs
+no-extra-libs-2
+repos-templates
+rpath
+ruby-no-strict-aliasing
+ruby-test-svnserve-race
+ruby-typemap-digest
+ssh-no-controlmaster
+svnshell
+apr-abi
+python-builds
+examples-compile-instructions
+workaround_EINVAL_on_kfreebsd
