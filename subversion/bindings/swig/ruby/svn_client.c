@@ -2238,13 +2238,13 @@ SWIGINTERN struct svn_client_copy_source_t *new_svn_client_copy_source_t(char co
     self = apr_palloc(pool, sizeof(*self));
     self->path = path ? apr_pstrdup(pool, path) : NULL;
 
-    revision = apr_palloc(pool, sizeof(revision));
+    revision = apr_palloc(pool, sizeof(*revision));
     revision->kind = rev->kind;
     revision->value.number = rev->value.number;
     revision->value.date = rev->value.date;
     self->revision = revision;
 
-    peg_revision = apr_palloc(pool, sizeof(peg_revision));
+    peg_revision = apr_palloc(pool, sizeof(*peg_revision));
     peg_revision->kind = peg_rev->kind;
     peg_revision->value.number = peg_rev->value.number;
     peg_revision->value.date = peg_rev->value.date;
