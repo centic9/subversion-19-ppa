@@ -387,7 +387,12 @@ endif
 
 	install -d "debian/subversion/$(BASH_COMPL_DIR)"
 	install -m644 tools/client-side/bash_completion \
-		"debian/subversion/$(BASH_COMPL_DIR)/subversion"
+		"debian/subversion/$(BASH_COMPL_DIR)/svn"
+	cd "debian/subversion/$(BASH_COMPL_DIR)" \
+	  && ln -s svn svnadmin \
+	  && ln -s svn svndumpfilter \
+	  && ln -s svn svnlook \
+	  && ln -s svn svnversion
 
 	dh_apache2 -s
 ifdef DEB_OPT_WITH_APACHE

@@ -23,7 +23,7 @@ patch by David Kimdon <dwhedon@debian.org>.  The basic theory is:
  
  # special link rule for mod_dav_svn
  LINK_APACHE_MOD = $(LIBTOOL) $(LTFLAGS) --mode=link $(CC) $(LT_LDFLAGS) $(CFLAGS) $(LDFLAGS) -rpath $(APACHE_LIBEXECDIR) -avoid-version -module $(APACHE_LDFLAGS)
-@@ -837,7 +837,9 @@
+@@ -836,7 +836,9 @@
  	./config.status subversion/bindings/swig/perl/native/Makefile.PL
  
  $(SWIG_PL_DIR)/native/Makefile: $(SWIG_PL_DIR)/native/Makefile.PL

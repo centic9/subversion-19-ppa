@@ -19,4 +19,6 @@ svn add hello
 svn commit -mdep8
 
 result=`wget -qO- http://localhost/svn/hello`
+service apache2 stop
+
 test "$result" = "Hello, world!"

@@ -1,3 +1,4 @@
 # 'man uscan' for the format and usage of this file
 version=3
+opts=pgpsigurlmangle=s/$/.asc/ \
 http://www.apache.org/dist/subversion/subversion-(\d+.\d+.\d+).tar.gz

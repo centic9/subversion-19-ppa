@@ -129,7 +129,25 @@ and what impact these changes may have.</p>
     <td>1.9</td>
     <td>Older formats remain supported.</td></tr>
   <tr>
-    <td><a href="#FSX">FSX</a></td>
+    <td><a href="#lock-http-pipelining">Lock HTTP pipelining</a></td>
+    <td>1.9</td>
+    <td>1.2</td>
+    <td>1.2</td>
+    <td></td></tr>
+  <tr>
+    <td><a href="#locking-multiple-files">Commit unlocking</a></td>
+    <td>1.2</td>
+    <td>1.9</td>
+    <td>1.2</td>
+    <td></td></tr>
+  <tr>
+    <td><a href="#locking-multiple-files">Locking multiple files</a></td>
+    <td>1.3</td>
+    <td>1.9</td>
+    <td>1.2</td>
+    <td>Over the svn:// protocol.</td></tr>
+  <tr>
+    <td><a href="#fsx">FSX</a></td>
     <td>any</td>
     <td>1.9</td>
     <td>1.9</td>
@@ -332,6 +350,15 @@ dump / load</a> cycle.  You can tell whether all format 7 features are enabled
 by looking for <tt>FSFS Logical Addressing: yes</tt> in the output of
 <tt>svnadmin info</tt>: if that line is printed, then the repository has
 all format 7 features enabled.
+
+<div class="notice">
+  <p><span style="color: red"><b>WARNING:</b></span> <b>Server restart
+  required!</b>  Replacing an existing repository with one rebuilt from a
+  dump or restored from backup requires a server restart.  This is true for
+  any repository format.  Alternatively, you may store the new repository in
+  a different directory and redirect the Apache configuration to use that
+  instead of the old one; <tt>svnserve</tt> does not offer that option.</p>
+</div>
 
 <p>The next subsection compares performance characteristics of repositories
 created directly as format 7 with those upgraded to format 7 from older formats.
@@ -617,7 +644,8 @@ contents, updating the index data after every revision / pack file
 manipulation is mandatory in format 7. <tt>svnfsfs load-index</tt>
 allows you to do that.  It consumes the same table format as produced
 above, except that the checksum field is optional and will be ignored
-if given.
+if given.  See <a href="#svnfsfs-issues">the known issues list</a>
+for problems in released versions of that tool.
 </p>
 
 <div class="notice">
@@ -627,6 +655,39 @@ if given.
 </div>
 
 </div>  <!-- svnfsfs-index-manipulation -->
+
+<div class="h4" id="svnfsfs-issues">
+<h4>Known issues
+  <a class="sectionlink" href="#svnfsfs-issues"
+    title="Link to this section">&para;</a>
+</h4>
+
+<p>In 1.9.0, the <tt>svnfsfs load-index</tt> does not work as described
+in its documentation.  The following restrictions and workarounds apply:
+</p>
+
+<ul>
+  <li>The lines must be sorted by offset (first column).</li>
+  <li>The item number (5th column) must be given as hexadecimal.  However,
+      <tt>svnfsfs dump-index</tt> produces decimal numbers in that column.
+  </li>
+  <li>The first entry must refer to the first revision in the pack file.
+      This is a non-issue for unpacked revisions. A simple solution is
+      inserting a line for empty section of length 0: 
+  </li>
+<pre>
+       Start       Length Type   Revision     Item 
+           0            0 none       3000        0
+           0          25a chgs       3999        1
+         25a          3b9 chgs       3998        1
+       ...
+</pre>
+</ul>
+
+<p>These problems have been fixed in 1.9.1.
+</p>
+
+</div>  <!-- svnfsfs-issues -->
 
 </div>  <!-- svnfsfs -->
 
@@ -922,6 +983,19 @@ command.</p>
 
 </div> <!-- svn-resolver-m -->
 
+<div class="h4" id="svn-status-r">
+<h4><tt>svn status</tt> now takes <tt>--revision</tt> (<tt>-r</tt>)
+  <a class="sectionlink" href="#svn-status-r"
+     title="Link to this section">&para;</a>
+</h4>
+
+<p>The <tt>status</tt> command, when given the <tt>--show-updates</tt>
+(<tt>-u</tt>) flag, can now compare the working copy to specific remote
+revision, given by the <tt>-r</tt> (<tt>--revision</tt>) flag.  (Previously,
+the remote revision would default to HEAD.)</p>
+
+</div> <!-- svn-status-r -->
+
 </div> <!-- cmdline -->
 
 <div class="h3" id="server-side-improvements">
@@ -1082,6 +1156,35 @@ you suspect internal repository corruption caused by a bug within SVN itself,
 you still need to run a full verification.</p>
 
 </div>  <!-- svnadmin-verify -->
+
+<div class="h4" id="svnadmin-revprop">
+<h4><tt>svnadmin setrevprop --transaction</tt> and
+    <tt>svnadmin delrevprop</tt>
+  <a class="sectionlink" href="#svnadmin-revprop"
+     title="Link to this section">&para;</a>
+</h4>
+
+<p>The <tt>setrevprop</tt> command now takes the <tt>--transaction</tt> flag.
+It can be used from <tt>pre-commit</tt> hooks to set revision properties
+on the transaction (commit-in-progress) before it becomes a commit.</p>
+
+<p>The new <tt>delrevprop</tt> command deletes a revision property from either
+a revision or a transaction.  It complements <tt>setrevprop</tt> which adds
+or modifies revprops.</tt>
+
+</div>  <!-- svnadmin-revprop -->
+
+<div class="h4" id="svnadmin-load-ignore-dates">
+<h4><tt>svnadmin load --ignore-dates</tt>
+  <a class="sectionlink" href="#svnadmin-load-ignore-dates"
+     title="Link to this section">&para;</a>
+</h4>
+
+<p>The <tt>svnadmin load</tt> command has a new flag, <tt>--ignore-dates</tt>,
+which causes it to ignore revision datestamps (<tt>svn:date</tt>) in the input
+dumpfile.</p>
+
+</div>  <!-- load-ignore-dates-revprop -->
 
 </div> <!-- svnadmin-improvements -->
 
@@ -1250,6 +1353,65 @@ command can determine the revision in which the macro was removed:</p>
 
 </div> <!-- prospective-blame -->
 
+<div class="h3" id="lock-http-pipelining">
+<h3>Lock HTTP pipelining
+  <a class="sectionlink" href="#lock-http-pipelining"
+     title="Link to this section">&para;</a>
+</h3>
+
+<p>When locking, or unlocking, multiple files in a single operation
+over HTTP the client will use HTTP pipelining for the individual
+WebDAV LOCK and UNLOCK requests.  This makes the operation faster
+particularly on connections with large network latency.  While HTTP
+pipelining is new for LOCK and UNLOCK the client was already using it
+for GET requests.</p>
+
+</div> <!-- lock-http-pipelining -->
+
+<div class="h3" id="locking-multiple-files">
+<h3>Locking multiple files
+  <a class="sectionlink" href="#locking-multiple-files"
+     title="Link to this section">&para;</a>
+</h3>
+
+<p>Subversion locks, the locks that prevent commits from other working
+copies, are stored in the repository. When adding or removing locks
+the FSFS backend can now operate on several locks at once.  This
+reduces the amount of disk IO when handling multiple locks and is
+significant when the total number of locks in the repository is large,
+100,000 say.</p>
+
+<p>The default behaviour for commits is to automatically release locks
+after a successful commit and this takes advantage of the more
+efficient lock process.  In previous releases the disk IO involved in
+releasing the locks would sometimes be greater than that involved in
+creating the new revision.</p>
+
+<p>Clients using the svn:// protocol will also benefit from the more
+efficient lock handling when locking or unlocking multiple files in a
+single operation.  Clients using HTTP will not get this benefit since
+the client still sends multiple, pipelined, LOCK and UNLOCK requests,
+one for each file.</p>
+
+</div> <!-- locking-multiple-files -->
+
+<div class="h3" id="locking-post-hooks">
+<h3>Multiple paths in post-lock and post-unlock hooks
+  <a class="sectionlink" href="#locking-post-hooks"
+     title="Link to this section">&para;</a>
+</h3>
+
+<p>The post-lock and post-unlock hooks receive multiple paths via
+standard input.  In previous releases the repository backends always
+operated on a single path at a time so only one path was ever passed
+to the hook.  In 1.9 when multiple paths are locked or unlocked in a
+single operation multiple paths will be passed to the hook.</p>
+
+<p>The pre-lock and pre-unlock hooks continue to be passed a single
+path as a parameter.</p>
+
+</div> <!-- locking-post-hooks -->
+
 </div>  <!-- enhancements -->
 
 <div class="h2" id="issues">
@@ -1260,6 +1422,35 @@ command can determine the revision in which the macro was removed:</p>
 
 <p>There are some known issues in the Subversion 1.9 releases.  These
 may be fixed in later 1.9.x releases.</p>
+
+<div class="h3" id="no-op-changes">
+<h3>No-op changes no longer dumped by '<tt>svnadmin dump</tt>'
+  <a class="sectionlink" href="#no-op-changes"
+    title="Link to this section">&para;</a>
+</h3>
+
+<p>See <a href="http://subversion.tigris.org/issues/show_bug.cgi?id=4598">issue #4598 "No-op changes no longer dumped by 'svnadmin dump' in 1.9"</a>.
+</p>
+
+<p>The impact of this change is still under discussion. A brief, initial
+description follows.
+</p>
+
+<p>It has always been possible, in atypical cases, for a commit to mark a
+file as 'changed' without actually changing the file's text and/or
+properties to a different value. Starting from 1.9.0, <tt>svnadmin dump</tt>
+still outputs a record for such a file, including a header saying that the
+action is 'change', but no longer appends a block describing the new text
+for the file. (And similarly for properties, perhaps? TBD.) When
+<tt>svnadmin load</tt> (1.8 or 1.9) reads this dumpfile, it does not record
+any change in the repository for such a file.
+</p>
+
+<p>One user-visible effect is that, after dump and load, 'svn log -v' will
+no longer list the path of such a file in its list of 'changed paths'.
+</p>
+
+</div>  <!-- no-op-changes -->
 
 <div class="h3" id="httpv1-commit-race">
 <h3>"Out of date" errors when committing over HTTPv1

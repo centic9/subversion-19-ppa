@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: dev@subversion.apache.org\n"
-"POT-Creation-Date: 2015-08-27 12:07+0000\n"
+"POT-Creation-Date: 2015-09-18 13:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1451,7 +1451,7 @@ msgstr ""
 #: ../libsvn_client/patch.c:3242 ../libsvn_client/relocate.c:153
 #: ../libsvn_client/resolved.c:119 ../libsvn_client/revert.c:149
 #: ../libsvn_client/status.c:368 ../libsvn_client/switch.c:471
-#: ../libsvn_client/update.c:701 ../libsvn_client/upgrade.c:109
+#: ../libsvn_client/update.c:701 ../libsvn_client/upgrade.c:111
 #: ../svn/util.c:986 ../svnbench/util.c:76
 #, c-format
 msgid "'%s' is not a local path"
@@ -1478,8 +1478,8 @@ msgstr ""
 #: ../libsvn_client/prop_commands.c:1398 ../libsvn_client/revisions.c:105
 #: ../libsvn_wc/adm_ops.c:913 ../libsvn_wc/adm_ops.c:967
 #: ../libsvn_wc/copy.c:628 ../libsvn_wc/copy.c:689 ../libsvn_wc/entries.c:1407
-#: ../libsvn_wc/entries.c:2803 ../libsvn_wc/entries.c:2834 ../svn/notify.c:1026
-#: ../svnbench/notify.c:968
+#: ../libsvn_wc/entries.c:2803 ../libsvn_wc/entries.c:2834
+#: ../svn/notify.c:1026 ../svnbench/notify.c:968
 #, c-format
 msgid "'%s' is not under version control"
 msgstr ""
@@ -1799,7 +1799,7 @@ msgstr ""
 #: ../libsvn_client/repos_diff.c:1002 ../libsvn_fs_fs/dag.c:1110
 #: ../libsvn_fs_x/dag.c:1074 ../libsvn_ra_svn/client.c:1324
 #: ../libsvn_wc/diff_editor.c:1987 ../libsvn_wc/diff_editor.c:2073
-#: ../libsvn_wc/externals.c:709 ../libsvn_wc/update_editor.c:4196
+#: ../libsvn_wc/externals.c:709 ../libsvn_wc/update_editor.c:4205
 #, c-format
 msgid "Checksum mismatch for '%s'"
 msgstr ""
@@ -1948,22 +1948,22 @@ msgid "Destination directory exists, and will not be overwritten unless forced"
 msgstr ""
 
 #: ../libsvn_client/export.c:265 ../libsvn_client/export.c:1527
-#: ../libsvn_wc/adm_crawler.c:1219 ../libsvn_wc/copy.c:651
+#: ../libsvn_wc/adm_crawler.c:1228 ../libsvn_wc/copy.c:651
 #: ../libsvn_wc/crop.c:234 ../libsvn_wc/crop.c:337 ../libsvn_wc/info.c:377
 #: ../libsvn_wc/node.c:529 ../libsvn_wc/props.c:202 ../libsvn_wc/status.c:2722
 #: ../libsvn_wc/wc_db.c:2066 ../libsvn_wc/wc_db.c:2607
 #: ../libsvn_wc/wc_db.c:2846 ../libsvn_wc/wc_db.c:2879
 #: ../libsvn_wc/wc_db.c:3037 ../libsvn_wc/wc_db.c:4050
 #: ../libsvn_wc/wc_db.c:6373 ../libsvn_wc/wc_db.c:6693
-#: ../libsvn_wc/wc_db.c:6866 ../libsvn_wc/wc_db.c:7053
-#: ../libsvn_wc/wc_db.c:8092 ../libsvn_wc/wc_db.c:9056
-#: ../libsvn_wc/wc_db.c:9788 ../libsvn_wc/wc_db.c:10433
-#: ../libsvn_wc/wc_db.c:10580 ../libsvn_wc/wc_db.c:10720
-#: ../libsvn_wc/wc_db.c:11096 ../libsvn_wc/wc_db.c:11429
-#: ../libsvn_wc/wc_db.c:12669 ../libsvn_wc/wc_db.c:12738
-#: ../libsvn_wc/wc_db.c:14067 ../libsvn_wc/wc_db.c:14116
-#: ../libsvn_wc/wc_db.c:14237 ../libsvn_wc/wc_db.c:14396
-#: ../libsvn_wc/wc_db.c:14837 ../libsvn_wc/wc_db.c:15701
+#: ../libsvn_wc/wc_db.c:6933 ../libsvn_wc/wc_db.c:7073
+#: ../libsvn_wc/wc_db.c:8112 ../libsvn_wc/wc_db.c:9112
+#: ../libsvn_wc/wc_db.c:9844 ../libsvn_wc/wc_db.c:10489
+#: ../libsvn_wc/wc_db.c:10636 ../libsvn_wc/wc_db.c:10776
+#: ../libsvn_wc/wc_db.c:11152 ../libsvn_wc/wc_db.c:11485
+#: ../libsvn_wc/wc_db.c:12725 ../libsvn_wc/wc_db.c:12794
+#: ../libsvn_wc/wc_db.c:14123 ../libsvn_wc/wc_db.c:14172
+#: ../libsvn_wc/wc_db.c:14293 ../libsvn_wc/wc_db.c:14452
+#: ../libsvn_wc/wc_db.c:14893 ../libsvn_wc/wc_db.c:15757
 #, c-format
 msgid "The node '%s' was not found."
 msgstr ""
@@ -2229,7 +2229,7 @@ msgid "Merge sources must both be either paths or URLs"
 msgstr ""
 
 #: ../libsvn_client/merge.c:11387 ../libsvn_client/merge.c:11549
-#: ../libsvn_client/merge.c:12445
+#: ../libsvn_client/merge.c:12447
 #, c-format
 msgid "'%s@%ld' must be ancestrally related to '%s@%ld'"
 msgstr ""
@@ -2256,30 +2256,37 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../libsvn_client/merge.c:11644
+#: ../libsvn_client/merge.c:11641
 #, c-format
 msgid ""
 "Can't reintegrate into '%s' because it is locally added and therefore not "
 "related to the merge source"
 msgstr ""
 
-#: ../libsvn_client/merge.c:11912
+#: ../libsvn_client/merge.c:11914
 msgid "Cannot merge automatically while ignoring mergeinfo"
 msgstr ""
 
-#: ../libsvn_client/merge.c:12667
+#: ../libsvn_client/merge.c:12577
+#, c-format
+msgid ""
+"Can't perform automatic merge into '%s' because it is locally added and "
+"therefore not related to the merge source"
+msgstr ""
+
+#: ../libsvn_client/merge.c:12676
 msgid ""
 "The required merge is reintegrate-like, and the record-only option cannot be "
 "used with this kind of merge"
 msgstr ""
 
-#: ../libsvn_client/merge.c:12673
+#: ../libsvn_client/merge.c:12682
 msgid ""
 "The required merge is reintegrate-like, and the depth option cannot be used "
 "with this kind of merge"
 msgstr ""
 
-#: ../libsvn_client/merge.c:12679
+#: ../libsvn_client/merge.c:12688
 msgid ""
 "The required merge is reintegrate-like, and the force_delete option cannot "
 "be used with this kind of merge"
@@ -2381,12 +2388,12 @@ msgstr ""
 
 #: ../libsvn_client/mtcc.c:980
 #, c-format
-msgid "Can't perform directory operation on '%s' as it is not a directory"
+msgid "Can't perform file operation on '%s' as it is not a file"
 msgstr ""
 
 #: ../libsvn_client/mtcc.c:990
 #, c-format
-msgid "Can't perform file operation on '%s' as it is not a file"
+msgid "Can't perform directory operation on '%s' as it is not a directory"
 msgstr ""
 
 #: ../libsvn_client/mtcc.c:997
@@ -2533,7 +2540,7 @@ msgstr ""
 
 #: ../libsvn_client/status.c:422 ../libsvn_client/status.c:601
 #: ../libsvn_wc/lock.c:564 ../libsvn_wc/lock.c:856 ../libsvn_wc/lock.c:1542
-#: ../libsvn_wc/wc_db.c:13625 ../libsvn_wc/wc_db_wcroot.c:722
+#: ../libsvn_wc/wc_db.c:13681 ../libsvn_wc/wc_db_wcroot.c:722
 #, c-format
 msgid "'%s' is not a working copy"
 msgstr ""
@@ -2559,7 +2566,7 @@ msgid "Directory '%s' has no URL"
 msgstr ""
 
 #: ../libsvn_client/switch.c:215 ../libsvn_ra_local/ra_plugin.c:236
-#: ../libsvn_ra_local/ra_plugin.c:326 ../libsvn_wc/update_editor.c:4889
+#: ../libsvn_ra_local/ra_plugin.c:326 ../libsvn_wc/update_editor.c:4898
 #, c-format
 msgid ""
 "'%s'\n"
@@ -2996,7 +3003,8 @@ msgstr ""
 msgid "storing node revision"
 msgstr ""
 
-#: ../libsvn_fs_base/bdb/reps-table.c:98 ../libsvn_fs_base/bdb/reps-table.c:200
+#: ../libsvn_fs_base/bdb/reps-table.c:98
+#: ../libsvn_fs_base/bdb/reps-table.c:200
 #, c-format
 msgid "No such representation '%s'"
 msgstr ""
@@ -3807,8 +3815,9 @@ msgid ""
 "%s bytes of meta data at offset %s for item %s in revision %ld"
 msgstr ""
 
-#: ../libsvn_fs_fs/dag.c:431 ../libsvn_fs_fs/dag.c:448 ../libsvn_fs_x/dag.c:377
-#: ../libsvn_fs_x/dag.c:504 ../libsvn_ra_serf/stat.c:606
+#: ../libsvn_fs_fs/dag.c:431 ../libsvn_fs_fs/dag.c:448
+#: ../libsvn_fs_x/dag.c:377 ../libsvn_fs_x/dag.c:504
+#: ../libsvn_ra_serf/stat.c:606
 msgid "Can't get entries of non-directory"
 msgstr ""
 
@@ -3922,31 +3931,31 @@ msgid ""
 msgstr ""
 
 #: ../libsvn_fs_fs/hotcopy.c:107 ../libsvn_fs_x/hotcopy.c:108
-#: ../libsvn_subr/io.c:270
+#: ../libsvn_subr/io.c:293
 #, c-format
 msgid "Error converting entry in directory '%s' to UTF-8"
 msgstr ""
 
 #: ../libsvn_fs_fs/hotcopy.c:147 ../libsvn_fs_x/hotcopy.c:148
-#: ../libsvn_subr/io.c:1063
+#: ../libsvn_subr/io.c:1086
 #, c-format
 msgid "Source '%s' is not a directory"
 msgstr ""
 
 #: ../libsvn_fs_fs/hotcopy.c:153 ../libsvn_fs_x/hotcopy.c:154
-#: ../libsvn_subr/io.c:1069
+#: ../libsvn_subr/io.c:1092
 #, c-format
 msgid "Destination '%s' is not a directory"
 msgstr ""
 
 #: ../libsvn_fs_fs/hotcopy.c:226 ../libsvn_fs_x/hotcopy.c:228
-#: ../libsvn_subr/io.c:1146 ../libsvn_subr/io.c:2701
+#: ../libsvn_subr/io.c:1169 ../libsvn_subr/io.c:2855
 #, c-format
 msgid "Can't read directory '%s'"
 msgstr ""
 
 #: ../libsvn_fs_fs/hotcopy.c:231 ../libsvn_fs_x/hotcopy.c:233
-#: ../libsvn_subr/io.c:1151 ../libsvn_subr/io.c:2706 ../libsvn_subr/io.c:4398
+#: ../libsvn_subr/io.c:1174 ../libsvn_subr/io.c:2860 ../libsvn_subr/io.c:4552
 #, c-format
 msgid "Error closing directory '%s'"
 msgstr ""
@@ -4447,7 +4456,7 @@ msgid ""
 msgstr ""
 
 #: ../libsvn_fs_fs/transaction.c:366 ../libsvn_fs_x/transaction.c:621
-#: ../libsvn_subr/io.c:2189
+#: ../libsvn_subr/io.c:2343
 #, c-format
 msgid "Can't get exclusive lock on file '%s'"
 msgstr ""
@@ -4917,7 +4926,7 @@ msgstr ""
 msgid "POST request did not return transaction information"
 msgstr ""
 
-#: ../libsvn_ra_serf/commit.c:1527 ../libsvn_ra_serf/update.c:2263
+#: ../libsvn_ra_serf/commit.c:1527 ../libsvn_ra_serf/update.c:2271
 #, c-format
 msgid "Unable to parse URL '%s'"
 msgstr ""
@@ -4950,7 +4959,7 @@ msgid "The REPORT response did not include the requested properties"
 msgstr ""
 
 #: ../libsvn_ra_serf/inherited_props.c:173 ../libsvn_ra_serf/property.c:264
-#: ../libsvn_ra_serf/update.c:1886
+#: ../libsvn_ra_serf/update.c:1894
 #, c-format
 msgid "Got unrecognized encoding '%s'"
 msgstr ""
@@ -5157,21 +5166,21 @@ msgstr ""
 msgid "Can't get properties of non-directory"
 msgstr ""
 
-#: ../libsvn_ra_serf/update.c:1135
+#: ../libsvn_ra_serf/update.c:1137 ../libsvn_ra_serf/update.c:1143
 #, c-format
 msgid "GET request returned unexpected delta base: %s"
 msgstr ""
 
-#: ../libsvn_ra_serf/update.c:1692 ../libsvn_ra_serf/update.c:1742
+#: ../libsvn_ra_serf/update.c:1700 ../libsvn_ra_serf/update.c:1750
 #, c-format
 msgid "Missing '%s' attribute"
 msgstr ""
 
-#: ../libsvn_ra_serf/update.c:1956 ../libsvn_ra_serf/update.c:1986
+#: ../libsvn_ra_serf/update.c:1964 ../libsvn_ra_serf/update.c:1994
 msgid "The REPORT response did not include the requested checked-in value"
 msgstr ""
 
-#: ../libsvn_ra_serf/update.c:2636
+#: ../libsvn_ra_serf/update.c:2644
 msgid "Missing update-report close tag"
 msgstr ""
 
@@ -6465,7 +6474,7 @@ msgid "Can't write to '%s'"
 msgstr ""
 
 #: ../libsvn_subr/cmdline.c:1441 ../libsvn_subr/cmdline.c:1456
-#: ../libsvn_subr/cmdline.c:1490 ../libsvn_subr/io.c:4002
+#: ../libsvn_subr/cmdline.c:1490 ../libsvn_subr/io.c:4156
 #, c-format
 msgid "Can't stat '%s'"
 msgstr ""
@@ -6829,233 +6838,238 @@ msgstr ""
 msgid "Cannot serialize negative length"
 msgstr ""
 
-#: ../libsvn_subr/io.c:331
+#: ../libsvn_subr/io.c:354
 #, c-format
 msgid "Can't check path '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:578 ../libsvn_subr/io.c:4954
+#: ../libsvn_subr/io.c:601 ../libsvn_subr/io.c:5108
 #, c-format
 msgid "Can't open '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:604 ../libsvn_subr/io.c:690
+#: ../libsvn_subr/io.c:627 ../libsvn_subr/io.c:713
 #, c-format
 msgid "Unable to make name for '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:677
+#: ../libsvn_subr/io.c:700
 #, c-format
 msgid "Can't create symbolic link '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:694 ../libsvn_subr/io.c:729 ../libsvn_subr/io.c:757
-#: ../libsvn_subr/io.c:1935
+#: ../libsvn_subr/io.c:717 ../libsvn_subr/io.c:752 ../libsvn_subr/io.c:780
+#: ../libsvn_subr/io.c:1965
 msgid "Symbolic links are not supported on this platform"
 msgstr ""
 
-#: ../libsvn_subr/io.c:717 ../libsvn_subr/io.c:1894 ../libsvn_subr/io.c:1914
+#: ../libsvn_subr/io.c:740 ../libsvn_subr/io.c:1924 ../libsvn_subr/io.c:1944
 #, c-format
 msgid "Can't read contents of link"
 msgstr ""
 
-#: ../libsvn_subr/io.c:777
+#: ../libsvn_subr/io.c:800
 #, c-format
 msgid "Can't find a temporary directory"
 msgstr ""
 
-#: ../libsvn_subr/io.c:895
+#: ../libsvn_subr/io.c:918
 #, c-format
 msgid "Can't copy '%s' to '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:938 ../libsvn_subr/io.c:960 ../libsvn_subr/io.c:1006
-#: ../libsvn_subr/io.c:5086
+#: ../libsvn_subr/io.c:961 ../libsvn_subr/io.c:983 ../libsvn_subr/io.c:1029
+#: ../libsvn_subr/io.c:5240
 #, c-format
 msgid "Can't set permissions on '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:956 ../libsvn_subr/io.c:2159 ../libsvn_subr/io.c:2218
-#: ../libsvn_subr/io.c:4992
+#: ../libsvn_subr/io.c:979 ../libsvn_subr/io.c:2313 ../libsvn_subr/io.c:2372
+#: ../libsvn_subr/io.c:5146
 #, c-format
 msgid "Can't get file name"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1029
+#: ../libsvn_subr/io.c:1052
 #, c-format
 msgid "Can't append '%s' to '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1075
+#: ../libsvn_subr/io.c:1098
 #, c-format
 msgid "Destination '%s' already exists"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1184
+#: ../libsvn_subr/io.c:1207
 #, c-format
 msgid "Can't make directory '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1288
+#: ../libsvn_subr/io.c:1311
 #, c-format
 msgid "Can't set access time of '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1618 ../libsvn_subr/io.c:1720
+#: ../libsvn_subr/io.c:1641 ../libsvn_subr/io.c:1743
 #, c-format
 msgid "Can't change perms of file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1848
+#: ../libsvn_subr/io.c:1871
 #, c-format
 msgid "Can't get attributes of file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1856
+#: ../libsvn_subr/io.c:1879
 #, c-format
 msgid "Can't set attributes of file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:1978
-#, c-format
-msgid "Can't set file '%s' read-only"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2010
-#, c-format
-msgid "Can't set file '%s' read-write"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2049 ../libsvn_subr/io.c:2083
-#, c-format
-msgid "Error getting UID of process"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2185
-#, c-format
-msgid "Can't get shared lock on file '%s'"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2223
-#, c-format
-msgid "Can't unlock file '%s'"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2321 ../libsvn_subr/io.c:2342
-#, c-format
-msgid "Can't flush file to disk"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2432 ../libsvn_subr/prompt.c:197
-#, c-format
-msgid "Can't open stdin"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2452
-msgid "Reading from stdin is disallowed"
-msgstr ""
-
-#: ../libsvn_subr/io.c:2521
+#: ../libsvn_subr/io.c:2016 ../libsvn_subr/io.c:2675
 #, c-format
 msgid "Can't remove file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2608
+#: ../libsvn_subr/io.c:2086 ../libsvn_subr/io.c:4191
+#, c-format
+msgid "Can't move '%s' to '%s'"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2132
+#, c-format
+msgid "Can't set file '%s' read-only"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2164
+#, c-format
+msgid "Can't set file '%s' read-write"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2203 ../libsvn_subr/io.c:2237
+#, c-format
+msgid "Error getting UID of process"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2339
+#, c-format
+msgid "Can't get shared lock on file '%s'"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2377
+#, c-format
+msgid "Can't unlock file '%s'"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2475 ../libsvn_subr/io.c:2496
+#, c-format
+msgid "Can't flush file to disk"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2586 ../libsvn_subr/prompt.c:197
+#, c-format
+msgid "Can't open stdin"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2606
+msgid "Reading from stdin is disallowed"
+msgstr ""
+
+#: ../libsvn_subr/io.c:2762
 #, c-format
 msgid "Can't remove '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2771
+#: ../libsvn_subr/io.c:2925
 #, c-format
 msgid "Path '%s' not found, case obstructed by '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2810
+#: ../libsvn_subr/io.c:2964
 #, c-format
 msgid "Path '%s' not found"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2884
+#: ../libsvn_subr/io.c:3038
 #, c-format
 msgid "Can't create process '%s' attributes"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2891
+#: ../libsvn_subr/io.c:3045
 #, c-format
 msgid "Can't set process '%s' cmdtype"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2907
+#: ../libsvn_subr/io.c:3061
 #, c-format
 msgid "Can't set process '%s' directory"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2921
+#: ../libsvn_subr/io.c:3075
 #, c-format
 msgid "Can't set process '%s' child input"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2929
+#: ../libsvn_subr/io.c:3083
 #, c-format
 msgid "Can't set process '%s' child outfile"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2937
+#: ../libsvn_subr/io.c:3091
 #, c-format
 msgid "Can't set process '%s' child errfile"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2951
+#: ../libsvn_subr/io.c:3105
 #, c-format
 msgid "Can't set process '%s' stdio pipes"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2959
+#: ../libsvn_subr/io.c:3113
 #, c-format
 msgid "Can't set process '%s' child errfile for error handler"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2966
+#: ../libsvn_subr/io.c:3120
 #, c-format
 msgid "Can't set process '%s' error handler"
 msgstr ""
 
-#: ../libsvn_subr/io.c:2989
+#: ../libsvn_subr/io.c:3143
 #, c-format
 msgid "Can't start process '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3013
+#: ../libsvn_subr/io.c:3167
 #, c-format
 msgid "Error waiting for process '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3022
+#: ../libsvn_subr/io.c:3176
 #, c-format
 msgid "Process '%s' failed (signal %d, core dumped)"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3027
+#: ../libsvn_subr/io.c:3181
 #, c-format
 msgid "Process '%s' failed (signal %d)"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3033
+#: ../libsvn_subr/io.c:3187
 #, c-format
 msgid "Process '%s' failed (exitwhy %d, exitcode %d)"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3041
+#: ../libsvn_subr/io.c:3195
 #, c-format
 msgid "Process '%s' returned error exitcode %d"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3148
+#: ../libsvn_subr/io.c:3302
 #, c-format
 msgid "'%s' returned %d"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3269
+#: ../libsvn_subr/io.c:3423
 #, c-format
 msgid ""
 "Error running '%s':  exitcode was %d, args were:\n"
@@ -7065,188 +7079,183 @@ msgid ""
 "%s"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3410
+#: ../libsvn_subr/io.c:3564
 #, c-format
 msgid "Can't detect MIME type of non-file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3505
+#: ../libsvn_subr/io.c:3659
 #, c-format
 msgid "Can't open file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3545
+#: ../libsvn_subr/io.c:3699
 #, c-format
 msgid "Can't close file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3546
+#: ../libsvn_subr/io.c:3700
 #, c-format
 msgid "Can't close stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3555 ../libsvn_subr/io.c:3591 ../libsvn_subr/io.c:3616
-#: ../libsvn_subr/io.c:3706
+#: ../libsvn_subr/io.c:3709 ../libsvn_subr/io.c:3745 ../libsvn_subr/io.c:3770
+#: ../libsvn_subr/io.c:3860
 #, c-format
 msgid "Can't read file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3556 ../libsvn_subr/io.c:3592 ../libsvn_subr/io.c:3617
-#: ../libsvn_subr/io.c:3707
+#: ../libsvn_subr/io.c:3710 ../libsvn_subr/io.c:3746 ../libsvn_subr/io.c:3771
+#: ../libsvn_subr/io.c:3861
 #, c-format
 msgid "Can't read stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3565
+#: ../libsvn_subr/io.c:3719
 #, c-format
 msgid "Can't write file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3566
+#: ../libsvn_subr/io.c:3720
 #, c-format
 msgid "Can't write stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3580
+#: ../libsvn_subr/io.c:3734
 #, c-format
 msgid "Can't get attribute information from file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3581
+#: ../libsvn_subr/io.c:3735
 #, c-format
 msgid "Can't get attribute information from stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3628
+#: ../libsvn_subr/io.c:3782
 #, c-format
 msgid "Can't set position pointer in file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3629
+#: ../libsvn_subr/io.c:3783
 #, c-format
 msgid "Can't set position pointer in stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3716
+#: ../libsvn_subr/io.c:3870
 #, c-format
 msgid "Can't seek in file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3717
+#: ../libsvn_subr/io.c:3871
 #, c-format
 msgid "Can't seek in stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3734 ../libsvn_subr/io.c:3791
+#: ../libsvn_subr/io.c:3888 ../libsvn_subr/io.c:3945
 #, c-format
 msgid "Can't write to file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3735 ../libsvn_subr/io.c:3792
+#: ../libsvn_subr/io.c:3889 ../libsvn_subr/io.c:3946
 #, c-format
 msgid "Can't write to stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3745 ../libsvn_subr/io.c:3897
+#: ../libsvn_subr/io.c:3899 ../libsvn_subr/io.c:4051
 #, c-format
 msgid "Can't flush file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3746 ../libsvn_subr/io.c:3898
+#: ../libsvn_subr/io.c:3900 ../libsvn_subr/io.c:4052
 #, c-format
 msgid "Can't flush stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3866
+#: ../libsvn_subr/io.c:4020
 #, c-format
 msgid "Can't write '%s' atomically"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3902
+#: ../libsvn_subr/io.c:4056
 #, c-format
 msgid "Can't truncate file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3903
+#: ../libsvn_subr/io.c:4057
 #, c-format
 msgid "Can't truncate stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3976
+#: ../libsvn_subr/io.c:4130
 #, c-format
 msgid "Can't read length line in file '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:3980
+#: ../libsvn_subr/io.c:4134
 msgid "Can't read length line in stream"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4037 ../libsvn_subr/stream.c:2284
-#, c-format
-msgid "Can't move '%s' to '%s'"
-msgstr ""
-
-#: ../libsvn_subr/io.c:4124
+#: ../libsvn_subr/io.c:4278
 #, c-format
 msgid "Can't create directory '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4136 ../libsvn_subr/io.c:4150
+#: ../libsvn_subr/io.c:4290 ../libsvn_subr/io.c:4304
 #, c-format
 msgid "Can't hide directory '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4211 ../libsvn_subr/io.c:4334
+#: ../libsvn_subr/io.c:4365 ../libsvn_subr/io.c:4488
 #, c-format
 msgid "Can't open directory '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4246
+#: ../libsvn_subr/io.c:4400
 #, c-format
 msgid "Can't remove directory '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4264
+#: ../libsvn_subr/io.c:4418
 #, c-format
 msgid "Can't read directory"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4284
+#: ../libsvn_subr/io.c:4438
 #, c-format
 msgid "Error closing directory"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4353
+#: ../libsvn_subr/io.c:4507
 #, c-format
 msgid "Can't read directory entry in '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4479
+#: ../libsvn_subr/io.c:4633
 #, c-format
 msgid "Can't check directory '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4541
+#: ../libsvn_subr/io.c:4695
 #, c-format
 msgid "Reading '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4560
+#: ../libsvn_subr/io.c:4714
 #, c-format
 msgid "First line of '%s' contains non-digit"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4875
+#: ../libsvn_subr/io.c:5029
 #, c-format
 msgid "Can't create temporary file from template '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4964
+#: ../libsvn_subr/io.c:5118
 #, c-format
 msgid "Can't set aside '%s'"
 msgstr ""
 
-#: ../libsvn_subr/io.c:4976 ../libsvn_subr/stream.c:2098
+#: ../libsvn_subr/io.c:5130 ../libsvn_subr/stream.c:2083
 #, c-format
 msgid "Unable to make name in '%s'"
 msgstr ""
@@ -7643,19 +7652,19 @@ msgstr ""
 msgid "Can't read special file: File '%s' not found"
 msgstr ""
 
-#: ../libsvn_subr/sysinfo.c:1220
+#: ../libsvn_subr/sysinfo.c:1226
 msgid "Intel"
 msgstr ""
 
-#: ../libsvn_subr/sysinfo.c:1221
+#: ../libsvn_subr/sysinfo.c:1227
 msgid "Intel 64-bit"
 msgstr ""
 
-#: ../libsvn_subr/sysinfo.c:1222
+#: ../libsvn_subr/sysinfo.c:1228
 msgid "PowerPC"
 msgstr ""
 
-#: ../libsvn_subr/sysinfo.c:1223
+#: ../libsvn_subr/sysinfo.c:1229
 msgid "PowerPC 64-bit"
 msgstr ""
 
@@ -7751,20 +7760,20 @@ msgstr ""
 msgid "Conversion from UTF-16 failed"
 msgstr ""
 
-#: ../libsvn_subr/utf8proc.c:215
+#: ../libsvn_subr/utf8proc.c:227
 #, c-format
 msgid "Invalid Unicode character U+%04lX"
 msgstr ""
 
-#: ../libsvn_subr/utf8proc.c:252
+#: ../libsvn_subr/utf8proc.c:264
 msgid "Cannot use a custom escape token in glob matching mode"
 msgstr ""
 
-#: ../libsvn_subr/utf8proc.c:283
+#: ../libsvn_subr/utf8proc.c:295
 msgid "Escape token must be one character"
 msgstr ""
 
-#: ../libsvn_subr/utf8proc.c:286
+#: ../libsvn_subr/utf8proc.c:298
 #, c-format
 msgid "Invalid escape character U+%04lX"
 msgstr ""
@@ -7865,12 +7874,12 @@ msgstr ""
 msgid "Pristine checksum for file '%s' is missing"
 msgstr ""
 
-#: ../libsvn_wc/adm_crawler.c:1143
+#: ../libsvn_wc/adm_crawler.c:1152
 #, c-format
 msgid "Checksum mismatch for text base of '%s'"
 msgstr ""
 
-#: ../libsvn_wc/adm_crawler.c:1154
+#: ../libsvn_wc/adm_crawler.c:1163
 #, c-format
 msgid "While preparing '%s' for commit"
 msgstr ""
@@ -7914,17 +7923,17 @@ msgid ""
 "URL '%s' (uuid: '%s') doesn't match existing URL '%s' (uuid: '%s') in '%s'"
 msgstr ""
 
-#: ../libsvn_wc/adm_ops.c:313 ../libsvn_wc/update_editor.c:5302
+#: ../libsvn_wc/adm_ops.c:313 ../libsvn_wc/update_editor.c:5311
 #, c-format
 msgid "Can't find parent directory's node while trying to add '%s'"
 msgstr ""
 
-#: ../libsvn_wc/adm_ops.c:322 ../libsvn_wc/update_editor.c:5296
+#: ../libsvn_wc/adm_ops.c:322 ../libsvn_wc/update_editor.c:5305
 #, c-format
 msgid "Can't add '%s' to a parent directory scheduled for deletion"
 msgstr ""
 
-#: ../libsvn_wc/adm_ops.c:329 ../libsvn_wc/update_editor.c:5309
+#: ../libsvn_wc/adm_ops.c:329 ../libsvn_wc/update_editor.c:5318
 #, c-format
 msgid "Can't schedule an addition of '%s' below a not-directory node"
 msgstr ""
@@ -8315,7 +8324,7 @@ msgid "Working copy '%s' is not locked"
 msgstr ""
 
 #: ../libsvn_wc/lock.c:1382 ../libsvn_wc/wc_db.c:4950
-#: ../libsvn_wc/wc_db.c:16214 ../libsvn_wc/wc_db_update_move.c:130
+#: ../libsvn_wc/wc_db.c:16270 ../libsvn_wc/wc_db_update_move.c:130
 #, c-format
 msgid "No write-lock in '%s'"
 msgstr ""
@@ -8684,25 +8693,25 @@ msgstr ""
 msgid "Unexpected attempt to edit, delete, or replace a node at path '%s'"
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:1898
+#: ../libsvn_wc/update_editor.c:1899
 #, c-format
 msgid ""
 "Failed to add directory '%s': object of the same name as the administrative "
 "directory"
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:2571
+#: ../libsvn_wc/update_editor.c:2572
 msgid "Couldn't do property merge"
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:3087
+#: ../libsvn_wc/update_editor.c:3088
 #, c-format
 msgid ""
 "Failed to add file '%s': object of the same name as the administrative "
 "directory"
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:3618
+#: ../libsvn_wc/update_editor.c:3627
 #, c-format
 msgid ""
 "Checksum mismatch for '%s':\n"
@@ -8710,22 +8719,22 @@ msgid ""
 "   recorded:  %s\n"
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:5277
+#: ../libsvn_wc/update_editor.c:5286
 #, c-format
 msgid "Node '%s' exists."
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:5337
+#: ../libsvn_wc/update_editor.c:5346
 #, c-format
 msgid "Copyfrom-url '%s' has different repository root than '%s'"
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:5549
+#: ../libsvn_wc/update_editor.c:5558
 #, c-format
 msgid "'%s' is not an unmodified copied directory"
 msgstr ""
 
-#: ../libsvn_wc/update_editor.c:5560
+#: ../libsvn_wc/update_editor.c:5569
 #, c-format
 msgid "Copyfrom '%s' doesn't match original location of '%s'"
 msgstr ""
@@ -8841,7 +8850,7 @@ msgid "Path '%s' is not moved"
 msgstr ""
 
 #: ../libsvn_wc/wc_db.c:2566 ../libsvn_wc/wc_db.c:3001
-#: ../libsvn_wc/wc_db.c:9866
+#: ../libsvn_wc/wc_db.c:9922
 #, c-format
 msgid "The node '%s' has a corrupt checksum value."
 msgstr ""
@@ -8861,57 +8870,64 @@ msgstr ""
 msgid "Expected node '%s' to be deleted."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:6857 ../libsvn_wc/wc_db.c:6909
+#: ../libsvn_wc/wc_db.c:6924 ../libsvn_wc/wc_db.c:6971
 #, c-format
 msgid "Can't revert '%s' without reverting children"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:7065
+#: ../libsvn_wc/wc_db.c:7085
 #, c-format
 msgid "Can't revert '%s' without reverting parent"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:7200
+#: ../libsvn_wc/wc_db.c:7220
 #, c-format
 msgid "Unsupported depth for revert of '%s'"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:7770
+#: ../libsvn_wc/wc_db.c:7790
 #, c-format
 msgid "The node '%s' is not a committed directory"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:8160
+#: ../libsvn_wc/wc_db.c:8180
 #, c-format
 msgid "Cannot delete '%s' as '%s' is excluded by server"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:8171
+#: ../libsvn_wc/wc_db.c:8191
 #, c-format
 msgid "Cannot delete '%s' as it is excluded by server"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:8178
+#: ../libsvn_wc/wc_db.c:8198
 #, c-format
 msgid "Cannot delete '%s' as it is excluded"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:8635
+#: ../libsvn_wc/wc_db.c:8655
 #, c-format
 msgid "Cannot move '%s' to '%s' because they are not in the same working copy"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:8993
+#: ../libsvn_wc/wc_db.c:8794
+#, c-format
+msgid ""
+"Encountered invalid node state in column %d of info query to working copy "
+"database"
+msgstr ""
+
+#: ../libsvn_wc/wc_db.c:9049
 #, c-format
 msgid "Corrupt data for '%s'"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:9065
+#: ../libsvn_wc/wc_db.c:9121
 #, c-format
 msgid "Error reading node '%s'"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:9323
+#: ../libsvn_wc/wc_db.c:9379
 #, c-format
 msgid ""
 "The node '%s' comes from unexpected repository '%s', expected '%s'; if this "
@@ -8919,90 +8935,90 @@ msgid ""
 "fix the problem, see issue #4087"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:9997
+#: ../libsvn_wc/wc_db.c:10053
 #, c-format
 msgid "The node '%s' is not in working copy '%s'"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:10034
+#: ../libsvn_wc/wc_db.c:10090
 #, c-format
 msgid "The node '%s' is not installable"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:10473 ../libsvn_wc/wc_db.c:10732
+#: ../libsvn_wc/wc_db.c:10529 ../libsvn_wc/wc_db.c:10788
 #, c-format
 msgid "The node '%s' has a status that has no properties."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:12684
+#: ../libsvn_wc/wc_db.c:12740
 #, c-format
 msgid "Expected node '%s' to be added."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:13013
+#: ../libsvn_wc/wc_db.c:13069
 #, c-format
 msgid "Path '%s' was not moved here"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:13201
+#: ../libsvn_wc/wc_db.c:13257
 #, c-format
 msgid "Node '%s' is not shadowed"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:14442 ../libsvn_wc/wc_db.c:14490
+#: ../libsvn_wc/wc_db.c:14498 ../libsvn_wc/wc_db.c:14546
 #, c-format
 msgid "'%s' is already locked."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:14447 ../libsvn_wc/wc_db.c:14498
+#: ../libsvn_wc/wc_db.c:14503 ../libsvn_wc/wc_db.c:14554
 #, c-format
 msgid "Working copy '%s' locked."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:14521
+#: ../libsvn_wc/wc_db.c:14577
 #, c-format
 msgid "Failed to lock working copy '%s'."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:14570
+#: ../libsvn_wc/wc_db.c:14626
 #, c-format
 msgid "'%s' is already locked via '%s'."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:14744
+#: ../libsvn_wc/wc_db.c:14800
 #, c-format
 msgid "Working copy not locked at '%s'."
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:15243
+#: ../libsvn_wc/wc_db.c:15299
 #, c-format
 msgid "Modification of '%s' already exists"
 msgstr ""
 
 #. If EXPRESSION is false, cause the caller to return an SVN_ERR_WC_CORRUPT
 #. * error, showing EXPRESSION and the caller's LOCAL_RELPATH in the message.
-#: ../libsvn_wc/wc_db.c:15840
+#: ../libsvn_wc/wc_db.c:15896
 #, c-format
 msgid "database inconsistency at local_relpath='%s' verifying expression '%s'"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:16028
+#: ../libsvn_wc/wc_db.c:16084
 #, c-format
 msgid "Can't upgrade '%s' as it is not a working copy root"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:16034
+#: ../libsvn_wc/wc_db.c:16090
 #, c-format
 msgid ""
 "Working copy '%s' is too old and must be upgraded to at least format %d, as "
 "created by Subversion %s"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:16052
+#: ../libsvn_wc/wc_db.c:16108
 msgid "Working copy upgrade failed"
 msgstr ""
 
-#: ../libsvn_wc/wc_db.c:16153
+#: ../libsvn_wc/wc_db.c:16209
 #, c-format
 msgid "The path '%s' is not in the working copy '%s'"
 msgstr ""
@@ -9025,6 +9041,10 @@ msgstr ""
 #: ../libsvn_wc/wc_db_pristine.c:320
 #, c-format
 msgid "New pristine text '%s' has different size: %ld versus %ld"
+msgstr ""
+
+#: ../libsvn_wc/wc_db_pristine.c:388
+msgid "Unable to create pristine install stream"
 msgstr ""
 
 #: ../libsvn_wc/wc_db_pristine.c:506
@@ -10118,8 +10138,8 @@ msgstr ""
 msgid "Resource is not under version control."
 msgstr ""
 
-#: ../svn/info-cmd.c:424 ../svnadmin/svnadmin.c:1979
-#: ../svnadmin/svnadmin.c:2197
+#: ../svn/info-cmd.c:424 ../svnadmin/svnadmin.c:1978
+#: ../svnadmin/svnadmin.c:2196
 #, c-format
 msgid "Path: %s\n"
 msgstr ""
@@ -10494,7 +10514,7 @@ msgid "Second revision required"
 msgstr ""
 
 #: ../svn/merge-cmd.c:281 ../svn/merge-cmd.c:308 ../svn/mergeinfo-cmd.c:361
-#: ../svnadmin/svnadmin.c:2168 ../svnlook/svnlook.c:2077
+#: ../svnadmin/svnadmin.c:2167 ../svnlook/svnlook.c:2077
 #: ../svnlook/svnlook.c:2271 ../svnlook/svnlook.c:2375
 #: ../svnlook/svnlook.c:2410
 msgid "Too many arguments given"
@@ -10913,7 +10933,7 @@ msgstr ""
 msgid "Transmitting file data "
 msgstr ""
 
-#: ../svn/notify.c:837 ../svnadmin/svnadmin.c:2146 ../svnbench/notify.c:749
+#: ../svn/notify.c:837 ../svnadmin/svnadmin.c:2145 ../svnbench/notify.c:749
 #, c-format
 msgid "'%s' locked by user '%s'.\n"
 msgstr ""
@@ -11113,8 +11133,9 @@ msgstr ""
 msgid "Error writing to stream"
 msgstr ""
 
-#: ../svn/propget-cmd.c:187 ../svn/proplist-cmd.c:156 ../svn/proplist-cmd.c:160
-#: ../svnlook/svnlook.c:1769 ../svnlook/svnlook.c:1923
+#: ../svn/propget-cmd.c:187 ../svn/proplist-cmd.c:156
+#: ../svn/proplist-cmd.c:160 ../svnlook/svnlook.c:1769
+#: ../svnlook/svnlook.c:1923
 #, c-format
 msgid ""
 "Inherited properties on '%s',\n"
@@ -11122,8 +11143,8 @@ msgid ""
 msgstr ""
 
 #. Not a --revprop
-#: ../svn/propget-cmd.c:197 ../svn/proplist-cmd.c:175 ../svnlook/svnlook.c:1804
-#: ../svnlook/svnlook.c:1958
+#: ../svn/propget-cmd.c:197 ../svn/proplist-cmd.c:175
+#: ../svnlook/svnlook.c:1804 ../svnlook/svnlook.c:1958
 #, c-format
 msgid "Properties on '%s':\n"
 msgstr ""
@@ -13159,7 +13180,7 @@ msgstr ""
 msgid "There is no change 0"
 msgstr ""
 
-#: ../svn/svn.c:2065 ../svnadmin/svnadmin.c:2518 ../svnbench/svnbench.c:539
+#: ../svn/svn.c:2065 ../svnadmin/svnadmin.c:2517 ../svnbench/svnbench.c:539
 #: ../svnfsfs/svnfsfs.c:331 ../svnrdump/svnrdump.c:876
 #: ../svnsync/svnsync.c:2124
 #, c-format
@@ -13223,7 +13244,7 @@ msgstr ""
 msgid "Subcommand argument required\n"
 msgstr ""
 
-#: ../svn/svn.c:2512 ../svnadmin/svnadmin.c:2718 ../svnbench/svnbench.c:726
+#: ../svn/svn.c:2512 ../svnadmin/svnadmin.c:2717 ../svnbench/svnbench.c:726
 #: ../svndumpfilter/svndumpfilter.c:1474 ../svnfsfs/svnfsfs.c:403
 #: ../svnlook/svnlook.c:2692 ../svnrdump/svnrdump.c:991
 #, c-format
@@ -13914,8 +13935,8 @@ msgstr ""
 msgid "Repositories compatible with 1.8.x or earlier cannot use --fs-type=%s"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:829 ../svnadmin/svnadmin.c:1214
-#: ../svnadmin/svnadmin.c:1399
+#: ../svnadmin/svnadmin.c:829 ../svnadmin/svnadmin.c:1213
+#: ../svnadmin/svnadmin.c:1398
 msgid "First revision cannot be higher than second"
 msgstr ""
 
@@ -13977,34 +13998,34 @@ msgstr ""
 
 #: ../svnadmin/svnadmin.c:1092
 #, c-format
-msgid "Packing revision properties in shard %s..."
+msgid "Packed revision properties in shard %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1104
+#: ../svnadmin/svnadmin.c:1103
 #, c-format
-msgid "Removing non-packed revision properties in shard %s..."
+msgid "Removed non-packed revision properties in shard %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1112
+#: ../svnadmin/svnadmin.c:1111
 #, c-format
 msgid "Bumped repository format to %ld\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1120
+#: ../svnadmin/svnadmin.c:1119
 #, c-format
 msgid "* Copied revision %ld.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1126
+#: ../svnadmin/svnadmin.c:1125
 #, c-format
 msgid "* Copied revisions from %ld to %ld.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1275
+#: ../svnadmin/svnadmin.c:1274
 msgid "No program provided"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1313
+#: ../svnadmin/svnadmin.c:1312
 msgid ""
 "general usage: svnadmin SUBCOMMAND REPOS_PATH  [ARGS & OPTIONS ...]\n"
 "Subversion repository administration tool.\n"
@@ -14014,176 +14035,176 @@ msgid ""
 "Available subcommands:\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1321 ../svnlook/svnlook.c:2243
+#: ../svnadmin/svnadmin.c:1320 ../svnlook/svnlook.c:2243
 #: ../svnserve/svnserve.c:429
 msgid ""
 "The following repository back-end (FS) modules are available:\n"
 "\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1350
+#: ../svnadmin/svnadmin.c:1349
 #, c-format
 msgid "Invalid revision number (%ld) specified"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1360
+#: ../svnadmin/svnadmin.c:1359
 msgid "Non-numeric revision specified"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1421
+#: ../svnadmin/svnadmin.c:1420
 msgid ""
 "Invalid property value found in dumpstream; consider repairing the source or "
 "using --bypass-prop-validation while loading."
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1487 ../svnadmin/svnadmin.c:2366
+#: ../svnadmin/svnadmin.c:1486 ../svnadmin/svnadmin.c:2365
 msgid ""
 "Failed to get exclusive repository access; perhaps another process\n"
 "such as httpd, svnserve or svn has it open?"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1492 ../svnadmin/svnadmin.c:2371
+#: ../svnadmin/svnadmin.c:1491 ../svnadmin/svnadmin.c:2370
 #, c-format
 msgid "Waiting on repository lock; perhaps another process has it open?\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1500
+#: ../svnadmin/svnadmin.c:1499
 #, c-format
 msgid ""
 "\n"
 "Recovery completed.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1507
+#: ../svnadmin/svnadmin.c:1506
 #, c-format
 msgid "The latest repos revision is %ld.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1622
+#: ../svnadmin/svnadmin.c:1621
 #, c-format
 msgid "Transaction '%s' removed.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1704 ../svnadmin/svnadmin.c:1818
-#: ../svnadmin/svnadmin.c:2416
+#: ../svnadmin/svnadmin.c:1703 ../svnadmin/svnadmin.c:1817
+#: ../svnadmin/svnadmin.c:2415
 #, c-format
 msgid "--revision (-r) and --transaction (-t) are mutually exclusive"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1710 ../svnadmin/svnadmin.c:2422
+#: ../svnadmin/svnadmin.c:1709 ../svnadmin/svnadmin.c:2421
 #, c-format
 msgid "Calling hooks is incompatible with --transaction (-t)"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1715 ../svnadmin/svnadmin.c:1760
-#: ../svnadmin/svnadmin.c:2427
+#: ../svnadmin/svnadmin.c:1714 ../svnadmin/svnadmin.c:1759
+#: ../svnadmin/svnadmin.c:2426
 #, c-format
 msgid "Missing revision"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1718 ../svnadmin/svnadmin.c:1763
-#: ../svnadmin/svnadmin.c:2430
+#: ../svnadmin/svnadmin.c:1717 ../svnadmin/svnadmin.c:1762
+#: ../svnadmin/svnadmin.c:2429
 #, c-format
 msgid "Only one revision allowed"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1881
+#: ../svnadmin/svnadmin.c:1880
 msgid ""
 "\n"
 "-----Summary of corrupt revisions-----\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1933
+#: ../svnadmin/svnadmin.c:1932
 #, c-format
 msgid "Failed to verify repository '%s'"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1984
+#: ../svnadmin/svnadmin.c:1983
 #, c-format
 msgid "UUID: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:1990
+#: ../svnadmin/svnadmin.c:1989
 #, c-format
 msgid "Repository Format: %d\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2004
+#: ../svnadmin/svnadmin.c:2003
 #, c-format
 msgid "Compatible With Version: %d.%d.0\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2023
+#: ../svnadmin/svnadmin.c:2022
 #, c-format
 msgid "Repository Capability: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2032
+#: ../svnadmin/svnadmin.c:2031
 #, c-format
 msgid "Filesystem Type: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2034
+#: ../svnadmin/svnadmin.c:2033
 #, c-format
 msgid "Filesystem Format: %d\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2043
+#: ../svnadmin/svnadmin.c:2042
 #, c-format
 msgid "FSFS Sharded: yes\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2045
+#: ../svnadmin/svnadmin.c:2044
 #, c-format
 msgid "FSFS Sharded: no\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2048
+#: ../svnadmin/svnadmin.c:2047
 #, c-format
 msgid "FSFS Shard Size: %d\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2057
+#: ../svnadmin/svnadmin.c:2056
 #, c-format
 msgid "FSFS Shards Packed: %ld/%ld\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2062
+#: ../svnadmin/svnadmin.c:2061
 #, c-format
 msgid "FSFS Logical Addressing: yes\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2064
+#: ../svnadmin/svnadmin.c:2063
 #, c-format
 msgid "FSFS Logical Addressing: no\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2074
+#: ../svnadmin/svnadmin.c:2073
 #, c-format
 msgid "Configuration File: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2198 ../svnlook/svnlook.c:2306
+#: ../svnadmin/svnadmin.c:2197 ../svnlook/svnlook.c:2306
 #, c-format
 msgid "UUID Token: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2199 ../svnlook/svnlook.c:2307
+#: ../svnadmin/svnadmin.c:2198 ../svnlook/svnlook.c:2307
 #, c-format
 msgid "Owner: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2200 ../svnlook/svnlook.c:2308
+#: ../svnadmin/svnadmin.c:2199 ../svnlook/svnlook.c:2308
 #, c-format
 msgid "Created: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2201 ../svnlook/svnlook.c:2309
+#: ../svnadmin/svnadmin.c:2200 ../svnlook/svnlook.c:2309
 #, c-format
 msgid "Expires: %s\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2203
+#: ../svnadmin/svnadmin.c:2202
 #, c-format
 msgid ""
 "Comment (%i line):\n"
@@ -14196,82 +14217,82 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../svnadmin/svnadmin.c:2251
+#: ../svnadmin/svnadmin.c:2250
 msgid "No paths to unlock provided"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2269
+#: ../svnadmin/svnadmin.c:2268
 #, c-format
 msgid "Path '%s' isn't locked.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2281
+#: ../svnadmin/svnadmin.c:2280
 #, c-format
 msgid "Removed lock on '%s'.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2334
+#: ../svnadmin/svnadmin.c:2333
 #, c-format
 msgid "'%s' unlocked by user '%s'.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2381
+#: ../svnadmin/svnadmin.c:2380
 msgid ""
 "Upgrade of this repository's underlying versioned filesystem is not "
 "supported; consider dumping and loading the data elsewhere"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2388
+#: ../svnadmin/svnadmin.c:2387
 msgid ""
 "Upgrade of this repository is not supported; consider dumping and loading "
 "the data elsewhere"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2394
+#: ../svnadmin/svnadmin.c:2393
 #, c-format
 msgid ""
 "\n"
 "Upgrade completed.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2508 ../svnfsfs/svnfsfs.c:321
+#: ../svnadmin/svnadmin.c:2507 ../svnfsfs/svnfsfs.c:321
 #: ../svnrdump/svnrdump.c:864
 msgid ""
 "Multiple revision arguments encountered; try '-r N:M' instead of '-r N -r M'"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2588
+#: ../svnadmin/svnadmin.c:2587
 #, c-format
 msgid "Cannot create pre-1.0-compatible repositories"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2600
+#: ../svnadmin/svnadmin.c:2599
 #, c-format
 msgid "Cannot guarantee compatibility beyond the current running version (%s)"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2701 ../svnfsfs/svnfsfs.c:386
+#: ../svnadmin/svnadmin.c:2700 ../svnfsfs/svnfsfs.c:386
 #, c-format
 msgid "subcommand argument required\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2738 ../svnfsfs/svnfsfs.c:421
+#: ../svnadmin/svnadmin.c:2737 ../svnfsfs/svnfsfs.c:421
 msgid "Repository argument required"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2746 ../svnfsfs/svnfsfs.c:429
+#: ../svnadmin/svnadmin.c:2745 ../svnfsfs/svnfsfs.c:429
 #, c-format
 msgid "'%s' is a URL when it should be a local path"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2776
+#: ../svnadmin/svnadmin.c:2775
 #, c-format
 msgid ""
 "Subcommand '%s' doesn't accept option '%s'\n"
 "Type 'svnadmin help %s' for usage.\n"
 msgstr ""
 
-#: ../svnadmin/svnadmin.c:2820
+#: ../svnadmin/svnadmin.c:2819
 msgid "Try 'svnadmin help' for more info"
 msgstr ""
 
@@ -14689,7 +14710,7 @@ msgstr ""
 msgid "%s is not a value HEX string"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:70
+#: ../svnfsfs/stats-cmd.c:72
 #, c-format
 msgid ""
 "%20s bytes in %12s reps\n"
@@ -14700,28 +14721,29 @@ msgid ""
 "%20s shared references\n"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:94
+#: ../svnfsfs/stats-cmd.c:96
 #, c-format
 msgid "%12s r%-8ld %s\n"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:120
+#: ../svnfsfs/stats-cmd.c:122
 #, c-format
 msgid "  %4s .. < %-4s %19s (%2d%%) bytes in %12s (%2d%%) items\n"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:239 ../svnfsfs/stats-cmd.c:246
+#: ../svnfsfs/stats-cmd.c:245 ../svnfsfs/stats-cmd.c:254
 #, c-format
 msgid "%11s %20s (%2d%%) representations\n"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:269 ../svnfsfs/stats-cmd.c:276
-#: ../svnfsfs/stats-cmd.c:299 ../svnfsfs/stats-cmd.c:306
+#. Total sum can't be zero here.
+#: ../svnfsfs/stats-cmd.c:292 ../svnfsfs/stats-cmd.c:302
+#: ../svnfsfs/stats-cmd.c:327 ../svnfsfs/stats-cmd.c:337
 #, c-format
 msgid "%11s %20s (%2d%%) bytes\n"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:347
+#: ../svnfsfs/stats-cmd.c:379
 #, c-format
 msgid ""
 "%20s bytes in %12s revisions\n"
@@ -14732,7 +14754,7 @@ msgid ""
 "%20s bytes with rep-sharing off\n"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:367
+#: ../svnfsfs/stats-cmd.c:399
 #, c-format
 msgid ""
 "%20s bytes in %12s nodes total\n"
@@ -14740,7 +14762,7 @@ msgid ""
 "%20s bytes in %12s file noderevs\n"
 msgstr ""
 
-#: ../svnfsfs/stats-cmd.c:378
+#: ../svnfsfs/stats-cmd.c:410
 #, c-format
 msgid ""
 "%20s bytes in %12s representations total\n"

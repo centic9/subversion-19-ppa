@@ -1,3 +1,24 @@
+subversion (1.9.2-1) unstable; urgency=medium
+
+  * New upstream release
+    + Fix crash when saving credentials in kwallet.  (Closes: #736879,
+      LP: #563179)
+
+ -- James McCoy <jamessan@debian.org>  Wed, 23 Sep 2015 21:27:15 -0400
+
+subversion (1.9.1-1) unstable; urgency=medium
+
+  * New upstream release
+    + Remove direct use of svn_fs_open2 from libsvn_fs_x, thus fixing the
+      missing svn_fs_open2 symbol.  (Closes: #795160)
+  * Enable gpg verification of new releases.
+  * Rename bash-completion file to svn and add symlinks for all other commands
+    which have completion.  (Closes: #797648)
+  * debian/tests/libapache2-mod-svn: Stop apache2 before ending the test, to
+    avoid leaving stray processes running.
+
+ -- James McCoy <jamessan@debian.org>  Mon, 07 Sep 2015 19:21:22 -0400
+
 subversion (1.9.0-1) unstable; urgency=medium
 
   * Upload to unstable
