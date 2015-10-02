@@ -12,4 +12,5 @@ svnshell
 apr-abi
 python-builds
 examples-compile-instructions
+apache_module_dependency
 workaround_EINVAL_on_kfreebsd
