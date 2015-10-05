@@ -1,3 +1,21 @@
+subversion (1.9.2-1ubuntu0~ppa3~wily) wily; urgency=medium
+
+  * Upload for Wily.
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 05 Oct 2015 21:30:45 +0200
+
+subversion (1.9.2-1ubuntu0~ppa3~vivid) vivid; urgency=medium
+
+  * Upload for Vivid.
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 05 Oct 2015 21:29:06 +0200
+
+subversion (1.9.2-1ubuntu0~ppa3~utopic) utopic; urgency=medium
+
+  * Upload for Utopic.
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 05 Oct 2015 21:26:25 +0200
+
 subversion (1.9.2-1ubuntu0~ppa2) trusty; urgency=medium
 
   * Adjust ruby packaging, not sure why it needs to be different here?
