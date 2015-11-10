@@ -1,3 +1,23 @@
+subversion (1.9.2-3) unstable; urgency=medium
+
+  * Re-enable libsvn-java on kfreebsd-*.
+  * Ensure swig2.0 is used to avoid build failures, until upstream figures
+    out how to work with swig >= 3.0.  (Closes: #804389)
+  * Fix FTBFS with Ruby 2.2 (Closes: #803589)
+    + Add ruby-frozen-nil patch to create a new Object instead of trying to
+      make modifications to the nil object.
+    + Add ruby-test-unit patch to be compatible with the ruby-test-unit gem as
+      well as the older test-unit API provided by minitest.
+
+ -- James McCoy <jamessan@debian.org>  Mon, 09 Nov 2015 19:22:18 -0500
+
+subversion (1.9.2-2) unstable; urgency=medium
+
+  * Fix FTBFS with older Ruby versions by using RbConfig['vendorarchdir'] to
+    find the .a/.la files we're deleting.
+
+ -- James McCoy <jamessan@debian.org>  Sun, 18 Oct 2015 22:10:03 -0400
+
 subversion (1.9.2-1) unstable; urgency=medium
 
   * New upstream release

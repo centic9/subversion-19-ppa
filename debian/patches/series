@@ -13,3 +13,5 @@ apr-abi
 python-builds
 examples-compile-instructions
 workaround_EINVAL_on_kfreebsd
+ruby-test-unit
+ruby-frozen-nil

@@ -17,7 +17,7 @@ include /usr/share/dpkg/default.mk
 # with DISABLE_JAVAHL_ARCHS.
 
 ENABLE_JAVAHL        := yes
-DISABLE_JAVAHL_ARCHS := hurd-i386 kfreebsd-i386 kfreebsd-amd64 hppa m68k sparc sparc64
+DISABLE_JAVAHL_ARCHS := hurd-i386 hppa m68k sparc sparc64
 ifneq (,$(filter $(DEB_HOST_ARCH), $(DISABLE_JAVAHL_ARCHS)))
   ENABLE_JAVAHL :=
 endif
@@ -90,7 +90,7 @@ confflags := \
 		--with-sasl=/usr \
 		--with-editor=/usr/bin/editor \
 		--with-ruby-sitedir=/usr/lib/ruby \
-		--with-swig=/usr \
+		--with-swig=/usr/bin/swig2.0 \
 		--with-kwallet \
 		CFLAGS="$(EXTRA_CFLAGS)" \
 		CXXFLAGS="$(EXTRA_CXXFLAGS)" \
@@ -122,8 +122,9 @@ endif
 
 ifdef DEB_OPT_WITH_RUBY
   RUBY := ruby
+  RUBY_ARCH_DIR := $(shell $(RUBY) -rrbconfig -e "print RbConfig::CONFIG['vendorarchdir']")
   rb_defs := SWIG_RB_SITE_LIB_DIR=$(shell $(RUBY) -rrbconfig -e "print RbConfig::CONFIG['vendordir']")
-  rb_defs += SWIG_RB_SITE_ARCH_DIR=$(shell $(RUBY) -rrbconfig -e "print RbConfig::CONFIG['vendorarchdir']")
+  rb_defs += SWIG_RB_SITE_ARCH_DIR=$(RUBY_ARCH_DIR)
 else
   DH_OPTIONS += -Nruby-svn -Nlibsvn-ruby1.8
   RUBY := fooby
@@ -336,7 +337,8 @@ endif
 ifdef DEB_OPT_WITH_RUBY
 	$(MAKE_B) install-swig-rb $(rb_defs) \
 		DESTDIR=$(CURDIR)/debian/tmp
-	find debian/tmp/$(libdir)/ruby \( -name \*.a -o -name \*.la \) -exec $(RM) {} +
+	find debian/tmp$(RUBY_ARCH_DIR) \( -name \*.a -o -name \*.la \) -exec $(RM) {} +
+	dh_install --autodest -pruby-svn debian/tmp$(RUBY_ARCH_DIR)
 endif
 
 	rm -f debian/tmp/usr/lib/apache2/modules/mod_dontdothat*

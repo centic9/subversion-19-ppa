@@ -1,0 +1,84 @@
+commit 4d43a1cc7a863977247eb27982e52185ff93b438
+Author: James McCoy <jamessan@debian.org>
+Date:   Sat Nov 7 22:00:59 2015 -0500
+
+    Adapt Ruby tests to work with test-unit gem.
+    
+    Ruby 2.2 bundles the test-unit gem instead of using the older "test-unit
+    API provided by minitest".  This also fixes testing when the test-unit
+    gem happens to be installed along with older Ruby versions.
+    
+    * Makefile.in:
+      (check-swig-rb): Detect whether test-unit supports the --collector
+       argument and, if so, use the dir collector.
+    
+    * subversion/bindings/swig/ruby/test/my-assertions.rb:
+      (_my_assert_block): Remove unnecessary assert_block.
+    
+    * subversion/bindings/swig/ruby/test/test_wc.rb:
+      (test_context_create): Remove useless assertion on result of
+       Svn::Wc::Create, especially since it varies based on Ruby version.
+
+diff --git a/Makefile.in b/Makefile.in
+index fbac5ab..7fd5b4e 100644
+--- a/Makefile.in
++++ b/Makefile.in
+@@ -921,13 +921,15 @@ swig-rb: autogen-swig-rb
+ check-swig-rb: swig-rb svnserve
+ 	$(TEST_SHLIB_VAR_SWIG_RB) \
+ 	cd $(SWIG_RB_DIR); \
+-          if [ "$(RUBY_MAJOR)" -eq 1 -a "$(RUBY_MINOR)" -lt 9 ] ; then \
+-            $(RUBY) -I $(SWIG_RB_SRC_DIR) \
+-              $(SWIG_RB_SRC_DIR)/test/run-test.rb \
+-	      --verbose=$(SWIG_RB_TEST_VERBOSE); \
+-          else \
+-	    $(RUBY) -I $(SWIG_RB_SRC_DIR) \
+-	      $(SWIG_RB_SRC_DIR)/test/run-test.rb; \
++	  check_rb() { \
++	    $(RUBY) -I $(SWIG_RB_SRC_DIR) $(SWIG_RB_SRC_DIR)/test/run-test.rb "$$@"; \
++	  }; \
++	  if check_rb --help 2>&1 | grep -q -- --collector; then \
++	    check_rb --collector=dir --verbose=$(SWIG_RB_TEST_VERBOSE); \
++	  elif [ "$(RUBY_MAJOR)" -eq 1 -a "$(RUBY_MINOR)" -lt 9 ] ; then \
++	    check_rb --verbose=$(SWIG_RB_TEST_VERBOSE); \
++	  else \
++	    check_rb; \
+           fi
+ 
+ EXTRACLEAN_SWIG_RB=rm -f $(SWIG_RB_SRC_DIR)/svn_*.c $(SWIG_RB_SRC_DIR)/core.c
+diff --git a/subversion/bindings/swig/ruby/test/my-assertions.rb b/subversion/bindings/swig/ruby/test/my-assertions.rb
+index 77c42e7..0aa3d94 100644
+--- a/subversion/bindings/swig/ruby/test/my-assertions.rb
++++ b/subversion/bindings/swig/ruby/test/my-assertions.rb
+@@ -27,9 +27,7 @@ module Test
+       # make an intermediary assertion block handler
+       def _my_assert_block(&block)
+        if RUBY_VERSION > '1.9'
+-         assert_block do
+-           yield
+-         end
++         yield
+        else
+          _wrap_assertion do
+            yield
+diff --git a/subversion/bindings/swig/ruby/test/test_wc.rb b/subversion/bindings/swig/ruby/test/test_wc.rb
+index 3a2aa65..763cbf6 100644
+--- a/subversion/bindings/swig/ruby/test/test_wc.rb
++++ b/subversion/bindings/swig/ruby/test/test_wc.rb
+@@ -1068,15 +1068,10 @@ EOE
+ 
+   def test_context_create
+     assert_nothing_raised do
+-      result = Svn::Wc::Context.create do |context|
++      Svn::Wc::Context.create do |context|
+         assert_not_nil context
+         assert_kind_of Svn::Wc::Context, context
+       end
+-      if RUBY_VERSION > '1.9'
+-        assert_equal(result,true)
+-      else
+-        assert_nil result
+-      end
+     end
+   end
+ 
