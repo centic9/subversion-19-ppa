@@ -29,6 +29,28 @@
 #include "private/svn_cache.h"
 #include "private/svn_fs_private.h"
 
+#ifdef HAVE_UNISTD_H
+#include <unistd.h>   /* For getpid() */
+#endif
+
+/* The apache headers define these and they conflict with our definitions. */
+#ifdef PACKAGE_BUGREPORT
+#undef PACKAGE_BUGREPORT
+#endif
+#ifdef PACKAGE_NAME
+#undef PACKAGE_NAME
+#endif
+#ifdef PACKAGE_STRING
+#undef PACKAGE_STRING
+#endif
+#ifdef PACKAGE_TARNAME
+#undef PACKAGE_TARNAME
+#endif
+#ifdef PACKAGE_VERSION
+#undef PACKAGE_VERSION
+#endif
+#include "svn_private_config.h"
+
 #ifndef DEFAULT_TIME_FORMAT
 #define DEFAULT_TIME_FORMAT "%Y-%m-%d %H:%M:%S %Z"
 #endif
@@ -78,7 +100,6 @@ int dav_svn__status(request_rec *r)
      the request. Ideally we would iterate over all processes but that
      would need some MPM support, so we settle for simply showing the
      process ID. */
-#include <unistd.h>
   ap_rprintf(r, "<dt>Server process id: %d</dt>\n", (int)getpid());
 #endif
 
