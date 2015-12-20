@@ -1,3 +1,9 @@
+subversion (1.9.3-1ubuntu0~ppa1wily1) wily; urgency=medium
+
+  * Port to wily
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sun, 20 Dec 2015 22:27:26 +0100
+
 subversion (1.9.3-1ubuntu0~ppa1vivid1) vivid; urgency=medium
 
   * Port to vivid
