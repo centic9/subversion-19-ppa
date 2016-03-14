@@ -1,0 +1,30 @@
+------------------------------------------------------------------------
+r1722164 | jamessan | 2015-12-29 10:53:22 -0500 (Tue, 29 Dec 2015) | 12 lines
+
+Filter out -Wdate-time from SWIG_CPPFLAGS
+
+As part of the reproducible builds effort[0], it's becoming more common to see
+-Wdate-time in CPPFLAGS, which is used to seed SWIG_CPPFLAGS.  Swig doesn't
+understand this switch, so continue the current whack-a-mole approach of
+filtering out unsupported switches in SWIG_CPPFLAGS.
+
+[0]: https://reproducible-builds.org/
+
+* configure.ac
+  (SWIG_CPPFLAGS): Filter out -Wdate-time
+
+
+Index: configure.ac
+===================================================================
+--- a/configure.ac	(revision 1722163)
++++ b/configure.ac	(revision 1722164)
+@@ -1518,6 +1518,7 @@
+ # Need to strip '-no-cpp-precomp' from CPPFLAGS for SWIG as well.
+ SWIG_CPPFLAGS="$CPPFLAGS"
+ SVN_STRIP_FLAG(SWIG_CPPFLAGS, [-no-cpp-precomp ])
++SVN_STRIP_FLAG(SWIG_CPPFLAGS, [-Wdate-time ])
+ AC_SUBST([SWIG_CPPFLAGS])
+ 
+ dnl Since this is used only on Unix-y systems, define the path separator as '/'
+
+------------------------------------------------------------------------
