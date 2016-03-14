@@ -84,7 +84,7 @@ available unless both client and server are the latest version.  There are
 also cases where a new feature will work but will run less efficiently if
 the client is new and the server old.</p>
 
-<p>There is <strong>no need</strong> to <a href="http://svnbook.red-bean.com/en/1.9/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin"
+<p>There is <strong>no need</strong> to <a href="http://svnbook.red-bean.com/en/1.7/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin"
 >dump and reload</a> your repositories. 
 Subversion 1.9 servers can read and write to repositories created by
 earlier versions.  To upgrade an existing server installation, just install the
@@ -345,7 +345,7 @@ your repository.  However, the new addressing, checksumming and packing scheme
 will not be used in that case but only in repositories that got created as format
 7. For best performance and to enable all features, it is recommended to
 perform a full
-<a href="http://svnbook.red-bean.com/en/1.9/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin">
+<a href="http://svnbook.red-bean.com/en/1.7/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin">
 dump / load</a> cycle.  You can tell whether all format 7 features are enabled
 by looking for <tt>FSFS Logical Addressing: yes</tt> in the output of
 <tt>svnadmin info</tt>: if that line is printed, then the repository has
@@ -781,7 +781,7 @@ respect to the feature set that its developers have in mind.  For as long as
 it keeps its experimental status, there will be neither forward nor backward
 compatibility between FSX repositories of different Subversion feature releases.
 Subversion 1.10 and later will recognize 1.9 FSX repositories and error out
-on them.  You may use <a href="http://svnbook.red-bean.com/en/1.9/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin">
+on them.  You may use <a href="http://svnbook.red-bean.com/en/1.7/svn.reposadmin.maint.html#svn.reposadmin.maint.migrate.svnadmin">
 dump and load</a> to upgrade an FSX repository from one release to another.</p>
 
 <p>Dump and load is also the only upgrade path between FSFS and FSX.</p>
@@ -1412,6 +1412,32 @@ path as a parameter.</p>
 
 </div> <!-- locking-post-hooks -->
 
+<div class="h3" id="apache-cache-status">
+<h3>Apache FSFS cache status
+  <a class="sectionlink" href="#apache-cache-status"
+     title="Link to this section">&para;</a>
+</h3>
+
+<p>Subversion's Apache module, mod_dav_svn, can display statistics
+that describe the status of the FSFS cache for the running Apache
+instance.  To enable this define a Location block in the Apache
+configuration file:</p>
+
+<pre>
+  &lt;Location /svn-status&gt;
+    SetHandler svn-status
+  &lt;/Location&gt;
+</pre>
+
+<p>Visiting the Location with a web browser will display statistics
+about the FSFS cache for the running Apache instance.  If Apache is
+configured to use multiple processes, most Unix deployments, the
+statistics will only apply to the process that served the GET request
+and repeating the request will cause different processes to be
+queried.</p>
+
+</div> <!-- apache-cache-status -->
+
 </div>  <!-- enhancements -->
 
 <div class="h2" id="issues">
@@ -1429,11 +1455,7 @@ may be fixed in later 1.9.x releases.</p>
     title="Link to this section">&para;</a>
 </h3>
 
-<p>See <a href="http://subversion.tigris.org/issues/show_bug.cgi?id=4598">issue #4598 "No-op changes no longer dumped by 'svnadmin dump' in 1.9"</a>.
-</p>
-
-<p>The impact of this change is still under discussion. A brief, initial
-description follows.
+<p>See <a href="https://issues.apache.org/jira/browse/SVN-4598">issue #4598 "No-op changes no longer dumped by 'svnadmin dump' in 1.9"</a>.
 </p>
 
 <p>It has always been possible, in atypical cases, for a commit to mark a
@@ -1448,6 +1470,9 @@ any change in the repository for such a file.
 
 <p>One user-visible effect is that, after dump and load, 'svn log -v' will
 no longer list the path of such a file in its list of 'changed paths'.
+</p>
+
+<p>A fix for this problem has been included in the 1.9.3 release.
 </p>
 
 </div>  <!-- no-op-changes -->

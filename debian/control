@@ -1,19 +1,18 @@
 Source: subversion
 Section: vcs
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Peter Samuelson <peter@p12n.org>
+Maintainer: Peter Samuelson <peter@p12n.org>
 Uploaders: James McCoy <jamessan@debian.org>
 Build-Depends: apache2-dev (>= 2.4.16),
                autoconf,
                autotools-dev,
                bash-completion,
-               debhelper (>= 8),
-               default-jdk (>= 2:1.6) [!hurd-i386 !hppa !m68k !sparc !sparc64],
+               debhelper (>= 9),
+               default-jdk (>= 2:1.6) [!hurd-i386 !hppa !sparc],
                dh-apache2,
                dh-python,
                doxygen,
-               junit [!hurd-i386 !hppa !m68k !sparc !sparc64],
+               junit [!hurd-i386 !hppa !sparc],
                kdelibs5-dev,
                libapr1-dev,
                libaprutil1-dev,
@@ -28,19 +27,16 @@ Build-Depends: apache2-dev (>= 2.4.16),
                perl,
 # Minimum version required to run tests
                python-all-dev (>= 2.7),
-               python-all-dbg,
                quilt,
                ruby,
                ruby-dev,
-               swig2.0,
+               swig,
                zlib1g-dev
 Build-Conflicts: libsvn-dev (<< 1.9~)
 Homepage: http://subversion.apache.org/
 Vcs-Svn: svn://anonscm.debian.org/pkg-subversion/src/1.9.x/
 Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-subversion/src/1.9.x/
-Standards-Version: 3.9.5
-X-Python-Version: >= 2.4
-XS-Testsuite: autopkgtest
+Standards-Version: 3.9.7
 
 Package: subversion
 Architecture: any
@@ -56,19 +52,6 @@ Description: Advanced version control system
  .
  This package includes the Subversion client (svn), repository
  administration tools (svnadmin, svnlook) and a network server (svnserve).
-
-Package: subversion-dbg
-Section: debug
-Priority: extra
-Architecture: any
-Depends: subversion (= ${binary:Version}) | libsvn1 (= ${binary:Version}) |
- libapache2-mod-svn (= ${binary:Version}) | subversion-tools (= ${binary:Version}) |
- python-subversion (= ${binary:Version}) | ruby-svn (= ${binary:Version}) |
- libsvn-perl (= ${binary:Version}) | libsvn-java (= ${binary:Version}) | ${misc:Depends}
-Description: Debug symbols for Apache Subversion
- This package contains debug symbols for libsvn1 and its dependent packages
- including subversion, libapache2-mod-svn, and the various programming language
- interfaces.
 
 Package: libsvn1
 Section: libs
@@ -115,8 +98,6 @@ Depends: apache2-api-20120211,
          libsvn1 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
-Breaks: libapache2-svn (<< 1.7.9-1+nmu5)
-Replaces: libapache2-svn (<< 1.7.9-1+nmu5)
 Suggests: db5.3-util
 Description: Apache Subversion server modules for Apache httpd
  This package provides the mod_dav_svn and mod_authz_svn modules for
@@ -124,51 +105,22 @@ Description: Apache Subversion server modules for Apache httpd
  server backend, to serve repositories over the http and https
  protocols.  See the 'subversion' package for more information.
 
-Package: libapache2-svn
-Section: oldlibs
-Priority: extra
-Architecture: all
-Depends: libapache2-mod-svn, ${misc:Depends}
-Description: Apache Subversion server modules for Apache httpd (dummy package)
- This is a transition package to install the Apache Subversion server
- module for Apache httpd.  You may remove this package if nothing depends
- on it.
-
 Package: python-subversion
 Section: python
 Architecture: any
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ${misc:Depends}, ${python:Depends}, ${shlibs:Depends}
-Suggests: python-subversion-dbg
 Provides: ${python:Provides}
-Breaks: svnmailer (<< 1.0.9)
 Description: Python bindings for Apache Subversion
  This is a set of Python interfaces to libsvn, the Apache Subversion
  libraries.  It is useful if you want to, for example, write a Python
  script that manipulates a Subversion repository or working copy.  See
  the 'subversion' package for more information.
 
-Package: python-subversion-dbg
-Priority: extra
-Section: python
-Architecture: any
-Pre-Depends: multiarch-support
-Depends: python-subversion (= ${binary:Version}), python-dbg, ${shlibs:Depends}, ${python:Depends}, ${misc:Depends}
-Provides: ${python:Provides}
-Description: Python bindings for Subversion (debug extension)
- This is a set of Python interfaces to libsvn, the Subversion
- libraries.  It is useful if you want to, for example, write a Python
- script that manipulates a Subversion repository or working copy.  See
- the 'subversion' package for more information.
- .
- This package contains the extension built for the python debug interpreter.
-
 Package: subversion-tools
 Priority: extra
 Architecture: any
 Depends: subversion, ${misc:Depends}, ${shlibs:Depends}
-Breaks: subversion (<< 1.8.10-3~)
-Replaces: subversion (<< 1.8.10-3~)
 Recommends: exim4 | mail-transport-agent,
             libconfig-inifiles-perl,
             libsvn-perl,
@@ -226,20 +178,8 @@ Architecture: any
 Multi-Arch: same
 Pre-Depends: ${misc:Pre-Depends}
 Depends: ruby, ${misc:Depends}, ${shlibs:Depends}
-Replaces: libsvn-ruby1.8 (<< 1.6.18dfsg-1)
-Breaks: libsvn-ruby1.8 (<< 1.6.18dfsg-1)
 Description: Ruby bindings for Apache Subversion
  This is a set of Ruby interfaces to libsvn, the Apache Subversion libraries.
  It is useful if you want to, for example, write a Ruby script that
  manipulates a Subversion repository or working copy.  See the
  'subversion' package for more information.
-
-Package: libsvn-ruby1.8
-Section: oldlibs
-Priority: extra
-Architecture: all
-Depends: ruby-svn, ${misc:Depends}
-Description: Ruby bindings for Apache Subversion (dummy package)
- This is a transition package to install the Apache Subversion library
- bindings for Ruby 1.8.  You may remove this package if nothing depends
- on it.
