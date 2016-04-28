@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: dev@subversion.apache.org\n"
-"POT-Creation-Date: 2015-12-08 07:53+0000\n"
+"POT-Creation-Date: 2016-04-21 14:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1279,7 +1279,7 @@ msgstr ""
 msgid "Credentials not saved"
 msgstr ""
 
-#: ../include/svn_error_codes.h:1563 ../libsvn_subr/gpg_agent.c:417
+#: ../include/svn_error_codes.h:1563 ../libsvn_subr/gpg_agent.c:451
 msgid "Authentication failed"
 msgstr ""
 
@@ -1448,7 +1448,7 @@ msgstr ""
 #: ../libsvn_client/add.c:908 ../libsvn_client/changelist.c:65
 #: ../libsvn_client/changelist.c:104 ../libsvn_client/deprecated.c:3078
 #: ../libsvn_client/export.c:1394 ../libsvn_client/import.c:831
-#: ../libsvn_client/patch.c:3233 ../libsvn_client/relocate.c:153
+#: ../libsvn_client/patch.c:3235 ../libsvn_client/relocate.c:153
 #: ../libsvn_client/resolved.c:119 ../libsvn_client/revert.c:149
 #: ../libsvn_client/status.c:368 ../libsvn_client/switch.c:471
 #: ../libsvn_client/update.c:701 ../libsvn_client/upgrade.c:111
@@ -1797,7 +1797,7 @@ msgstr ""
 
 #: ../libsvn_client/copy_foreign.c:373 ../libsvn_client/export.c:814
 #: ../libsvn_client/repos_diff.c:1002 ../libsvn_fs_fs/dag.c:1110
-#: ../libsvn_fs_x/dag.c:1074 ../libsvn_ra_svn/client.c:1324
+#: ../libsvn_fs_x/dag.c:1074 ../libsvn_ra_svn/client.c:1319
 #: ../libsvn_wc/diff_editor.c:1987 ../libsvn_wc/diff_editor.c:2073
 #: ../libsvn_wc/externals.c:709 ../libsvn_wc/update_editor.c:4205
 #, c-format
@@ -2052,8 +2052,8 @@ msgstr ""
 msgid "New entry name required when importing a file"
 msgstr ""
 
-#: ../libsvn_client/import.c:757 ../libsvn_client/patch.c:3240
-#: ../libsvn_client/patch.c:3252 ../libsvn_wc/delete.c:93
+#: ../libsvn_client/import.c:757 ../libsvn_client/patch.c:3242
+#: ../libsvn_client/patch.c:3254 ../libsvn_wc/delete.c:93
 #: ../libsvn_wc/lock.c:121 ../libsvn_wc/wc_db_wcroot.c:78
 #, c-format
 msgid "'%s' does not exist"
@@ -2411,15 +2411,15 @@ msgstr ""
 msgid "Cannot strip %u components from '%s'"
 msgstr ""
 
-#: ../libsvn_client/patch.c:915
+#: ../libsvn_client/patch.c:917
 msgid "Invalid link representation"
 msgstr ""
 
-#: ../libsvn_client/patch.c:3229
+#: ../libsvn_client/patch.c:3231
 msgid "strip count must be positive"
 msgstr ""
 
-#: ../libsvn_client/patch.c:3245 ../libsvn_fs_base/tree.c:4099
+#: ../libsvn_client/patch.c:3247 ../libsvn_fs_base/tree.c:4099
 #: ../libsvn_fs_base/tree.c:4104 ../libsvn_fs_fs/tree.c:3198
 #: ../libsvn_fs_fs/tree.c:3203 ../libsvn_fs_x/tree.c:3244
 #: ../libsvn_fs_x/tree.c:3249 ../libsvn_ra/compat.c:677
@@ -2428,7 +2428,7 @@ msgstr ""
 msgid "'%s' is not a file"
 msgstr ""
 
-#: ../libsvn_client/patch.c:3257 ../libsvn_wc/util.c:59
+#: ../libsvn_client/patch.c:3259 ../libsvn_wc/util.c:59
 #, c-format
 msgid "'%s' is not a directory"
 msgstr ""
@@ -2763,7 +2763,7 @@ msgstr ""
 msgid "Invalid control character '0x%02x' in path '%s'"
 msgstr ""
 
-#: ../libsvn_fs/fs-loader.c:655 ../libsvn_repos/repos.c:1976
+#: ../libsvn_fs/fs-loader.c:655 ../libsvn_repos/repos.c:1981
 msgid "Hotcopy source and destination are equal"
 msgstr ""
 
@@ -3659,7 +3659,7 @@ msgstr ""
 msgid "Transaction is dead: '%s'"
 msgstr ""
 
-#: ../libsvn_fs_base/revs-txns.c:272 ../libsvn_fs_fs/fs_fs.c:2114
+#: ../libsvn_fs_base/revs-txns.c:272 ../libsvn_fs_fs/fs_fs.c:2116
 #: ../libsvn_fs_x/fs_x.c:1153
 #, c-format
 msgid "revprop '%s' has unexpected value in filesystem"
@@ -3778,7 +3778,7 @@ msgid "No representation found at offset %s for item %s in revision %ld"
 msgstr ""
 
 #: ../libsvn_fs_fs/cached_data.c:1522 ../libsvn_fs_fs/cached_data.c:1535
-#: ../libsvn_fs_fs/cached_data.c:2952 ../libsvn_fs_x/cached_data.c:1424
+#: ../libsvn_fs_fs/cached_data.c:2956 ../libsvn_fs_x/cached_data.c:1424
 #: ../libsvn_fs_x/cached_data.c:1437 ../libsvn_fs_x/cached_data.c:1713
 msgid "Reading one svndiff window read beyond the end of the representation"
 msgstr ""
@@ -3798,17 +3798,17 @@ msgstr ""
 msgid "Directory entry corrupt in '%s'"
 msgstr ""
 
-#: ../libsvn_fs_fs/cached_data.c:2657
+#: ../libsvn_fs_fs/cached_data.c:2661
 #, c-format
 msgid "malformed property list for node-revision '%s' in '%s'"
 msgstr ""
 
-#: ../libsvn_fs_fs/cached_data.c:2690
+#: ../libsvn_fs_fs/cached_data.c:2694
 #, c-format
 msgid "malformed property list for node-revision '%s'"
 msgstr ""
 
-#: ../libsvn_fs_fs/cached_data.c:3133
+#: ../libsvn_fs_fs/cached_data.c:3137
 #, c-format
 msgid ""
 "Low-level checksum mismatch while reading\n"
@@ -3914,16 +3914,16 @@ msgstr ""
 msgid "Invalid revision number '%ld'"
 msgstr ""
 
-#: ../libsvn_fs_fs/fs_fs.c:1808
+#: ../libsvn_fs_fs/fs_fs.c:1810
 msgid "FSFS is not compatible with Subversion prior to 1.1"
 msgstr ""
 
-#: ../libsvn_fs_fs/fs_fs.c:1945
+#: ../libsvn_fs_fs/fs_fs.c:1947
 #, c-format
 msgid "malformed node origin data in '%s'"
 msgstr ""
 
-#: ../libsvn_fs_fs/fs_fs.c:2013
+#: ../libsvn_fs_fs/fs_fs.c:2015
 #, c-format
 msgid ""
 "Node origin for '%s' exists with a different value (%s) than what we were "
@@ -4820,7 +4820,7 @@ msgstr ""
 msgid "'%s' isn't a child of session URL '%s'"
 msgstr ""
 
-#: ../libsvn_ra/ra_loader.c:526 ../libsvn_ra_svn/client.c:2592
+#: ../libsvn_ra/ra_loader.c:526 ../libsvn_ra_svn/client.c:2587
 #, c-format
 msgid "'%s' isn't a child of repository root URL '%s'"
 msgstr ""
@@ -4893,7 +4893,7 @@ msgid "'%s' path not found"
 msgstr ""
 
 #: ../libsvn_ra_local/ra_plugin.c:1667 ../libsvn_ra_serf/options.c:732
-#: ../libsvn_ra_svn/client.c:2793
+#: ../libsvn_ra_svn/client.c:2788
 #, c-format
 msgid "Don't know anything about capability '%s'"
 msgstr ""
@@ -4908,30 +4908,30 @@ msgstr ""
 msgid "Unable to open repository '%s'"
 msgstr ""
 
-#: ../libsvn_ra_serf/commit.c:285
+#: ../libsvn_ra_serf/commit.c:287
 msgid "No Location header received"
 msgstr ""
 
-#: ../libsvn_ra_serf/commit.c:295
+#: ../libsvn_ra_serf/commit.c:297
 msgid "Error parsing Location header value"
 msgstr ""
 
-#: ../libsvn_ra_serf/commit.c:481 ../libsvn_repos/commit.c:520
+#: ../libsvn_ra_serf/commit.c:483 ../libsvn_repos/commit.c:520
 #, c-format
 msgid "Path '%s' not present"
 msgstr ""
 
-#: ../libsvn_ra_serf/commit.c:1289
+#: ../libsvn_ra_serf/commit.c:1298
 #, c-format
 msgid "POST request did not return transaction information"
 msgstr ""
 
-#: ../libsvn_ra_serf/commit.c:1528 ../libsvn_ra_serf/update.c:2271
+#: ../libsvn_ra_serf/commit.c:1587 ../libsvn_ra_serf/update.c:2271
 #, c-format
 msgid "Unable to parse URL '%s'"
 msgstr ""
 
-#: ../libsvn_ra_serf/commit.c:1774
+#: ../libsvn_ra_serf/commit.c:1835
 #, c-format
 msgid "File '%s' already exists"
 msgstr ""
@@ -4958,7 +4958,7 @@ msgstr ""
 msgid "The REPORT response did not include the requested properties"
 msgstr ""
 
-#: ../libsvn_ra_serf/inherited_props.c:173 ../libsvn_ra_serf/property.c:264
+#: ../libsvn_ra_serf/inherited_props.c:171 ../libsvn_ra_serf/property.c:264
 #: ../libsvn_ra_serf/update.c:1894
 #, c-format
 msgid "Got unrecognized encoding '%s'"
@@ -4994,7 +4994,7 @@ msgstr ""
 msgid "Unsupported encoding '%s'"
 msgstr ""
 
-#: ../libsvn_ra_serf/log.c:574 ../libsvn_ra_svn/client.c:1714
+#: ../libsvn_ra_serf/log.c:574 ../libsvn_ra_svn/client.c:1709
 msgid "Server does not support custom revprops via log"
 msgstr ""
 
@@ -5003,7 +5003,7 @@ msgstr ""
 msgid "A MERGE response for '%s' is not a child of the destination ('%s')"
 msgstr ""
 
-#: ../libsvn_ra_serf/merge.c:447
+#: ../libsvn_ra_serf/merge.c:448
 msgid "The MERGE response did not include a new revision"
 msgstr ""
 
@@ -5436,137 +5436,137 @@ msgid ""
 "Server doesn't support setting arbitrary revision properties during commit"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1227
+#: ../libsvn_ra_svn/client.c:1224
 msgid "Inherited proplist element not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1302
+#: ../libsvn_ra_svn/client.c:1297
 msgid "Non-string as part of file contents"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1391
+#: ../libsvn_ra_svn/client.c:1386
 msgid "Dirlist element not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1400
+#: ../libsvn_ra_svn/client.c:1395
 #, c-format
 msgid "Invalid directory entry name '%s'"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1483
+#: ../libsvn_ra_svn/client.c:1478
 msgid "Mergeinfo element is not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1702
+#: ../libsvn_ra_svn/client.c:1697
 msgid "Log entry not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1750
+#: ../libsvn_ra_svn/client.c:1745
 msgid "Changed-path entry not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1905
+#: ../libsvn_ra_svn/client.c:1900
 msgid "'stat' not implemented"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1964
+#: ../libsvn_ra_svn/client.c:1959
 msgid "'get-locations' not implemented"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:1979
+#: ../libsvn_ra_svn/client.c:1974
 msgid "Location entry not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2018
+#: ../libsvn_ra_svn/client.c:2013
 msgid "'get-location-segments' not implemented"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2035
+#: ../libsvn_ra_svn/client.c:2030
 msgid "Location segment entry not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2045
+#: ../libsvn_ra_svn/client.c:2040
 msgid "Expected valid revision range"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2086
+#: ../libsvn_ra_svn/client.c:2081
 msgid "'get-file-revs' not implemented"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2110
+#: ../libsvn_ra_svn/client.c:2105
 msgid "Revision entry not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2127 ../libsvn_ra_svn/client.c:2157
+#: ../libsvn_ra_svn/client.c:2122 ../libsvn_ra_svn/client.c:2152
 msgid "Text delta chunk not a string"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2169
+#: ../libsvn_ra_svn/client.c:2164
 msgid "The get-file-revs command didn't return any revisions"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2216
+#: ../libsvn_ra_svn/client.c:2211
 msgid "Server doesn't support the lock command"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2280
+#: ../libsvn_ra_svn/client.c:2275
 msgid "Server doesn't support the unlock command"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2378
+#: ../libsvn_ra_svn/client.c:2373
 msgid "Lock response not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2392
+#: ../libsvn_ra_svn/client.c:2387
 msgid "Unknown status for lock command"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2416
+#: ../libsvn_ra_svn/client.c:2411
 msgid "Didn't receive end marker for lock responses"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2506
+#: ../libsvn_ra_svn/client.c:2501
 msgid "Unlock response not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2520
+#: ../libsvn_ra_svn/client.c:2515
 msgid "Unknown status for unlock command"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2543
+#: ../libsvn_ra_svn/client.c:2538
 msgid "Didn't receive end marker for unlock responses"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2567 ../libsvn_ra_svn/client.c:2619
+#: ../libsvn_ra_svn/client.c:2562 ../libsvn_ra_svn/client.c:2614
 msgid "Server doesn't support the get-lock command"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2633
+#: ../libsvn_ra_svn/client.c:2628
 msgid "Lock element not a list"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2676
+#: ../libsvn_ra_svn/client.c:2671
 msgid "Server doesn't support the replay command"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2707
+#: ../libsvn_ra_svn/client.c:2702
 msgid "Server doesn't support the replay-range command"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2725
+#: ../libsvn_ra_svn/client.c:2720
 #, c-format
 msgid "Expected 'revprops', found '%s'"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2742
+#: ../libsvn_ra_svn/client.c:2737
 msgid "Error while replaying commit"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2815
+#: ../libsvn_ra_svn/client.c:2810
 msgid "'get-deleted-rev' not implemented"
 msgstr ""
 
-#: ../libsvn_ra_svn/client.c:2926
+#: ../libsvn_ra_svn/client.c:2921
 #, c-format
 msgid "Unsupported RA loader version (%d) for ra_svn"
 msgstr ""
@@ -6249,54 +6249,54 @@ msgstr ""
 msgid "Creating conf directory"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:894
+#: ../libsvn_repos/repos.c:899
 msgid "Creating svnserve.conf file"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:912
+#: ../libsvn_repos/repos.c:917
 msgid "Creating passwd file"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:954
+#: ../libsvn_repos/repos.c:959
 msgid "Creating authz file"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:984
+#: ../libsvn_repos/repos.c:989
 msgid "Creating hooks-env file"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:1040
+#: ../libsvn_repos/repos.c:1045
 msgid "Could not create top-level directory"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:1050
+#: ../libsvn_repos/repos.c:1055
 msgid "Creating DAV sandbox dir"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:1119
+#: ../libsvn_repos/repos.c:1124
 msgid "Error opening db lockfile"
-msgstr ""
-
-#: ../libsvn_repos/repos.c:1157
-#, c-format
-msgid "'%s' is an existing repository"
 msgstr ""
 
 #: ../libsvn_repos/repos.c:1162
 #, c-format
+msgid "'%s' is an existing repository"
+msgstr ""
+
+#: ../libsvn_repos/repos.c:1167
+#, c-format
 msgid "'%s' is a subdirectory of an existing repository rooted at '%s'"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:1172
+#: ../libsvn_repos/repos.c:1177
 msgid "Repository creation failed"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:1262
+#: ../libsvn_repos/repos.c:1267
 #, c-format
 msgid "Expected repository format '%d' or '%d'; found format '%d'"
 msgstr ""
 
-#: ../libsvn_repos/repos.c:1566
+#: ../libsvn_repos/repos.c:1571
 #, c-format
 msgid "unknown capability '%s'"
 msgstr ""
@@ -6344,12 +6344,12 @@ msgstr ""
 msgid "Can't unlock cache mutex"
 msgstr ""
 
-#: ../libsvn_subr/cache-membuffer.c:1861
+#: ../libsvn_subr/cache-membuffer.c:1840
 #, c-format
 msgid "Can't create cache mutex"
 msgstr ""
 
-#: ../libsvn_subr/cache-membuffer.c:2813
+#: ../libsvn_subr/cache-membuffer.c:2792
 msgid "Can't iterate a membuffer-based cache"
 msgstr ""
 
@@ -6800,12 +6800,12 @@ msgstr ""
 msgid "unknown error"
 msgstr ""
 
-#: ../libsvn_subr/gpg_agent.c:410 ../libsvn_subr/prompt.c:627
+#: ../libsvn_subr/gpg_agent.c:444 ../libsvn_subr/prompt.c:627
 #, c-format
 msgid "Password for '%s': "
 msgstr ""
 
-#: ../libsvn_subr/gpg_agent.c:411
+#: ../libsvn_subr/gpg_agent.c:445
 #, c-format
 msgid "Enter your Subversion password for %s"
 msgstr ""
@@ -7515,31 +7515,31 @@ msgstr ""
 msgid "Passphrase for '%s': "
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:841
+#: ../libsvn_subr/prompt.c:840
 msgid "yes"
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:842
+#: ../libsvn_subr/prompt.c:841
 msgid "y"
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:847
+#: ../libsvn_subr/prompt.c:846
 msgid "no"
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:848
+#: ../libsvn_subr/prompt.c:847
 msgid "n"
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:854
+#: ../libsvn_subr/prompt.c:853
 msgid "Please type 'yes' or 'no': "
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:868
+#: ../libsvn_subr/prompt.c:867
 msgid "Store password unencrypted (yes/no)? "
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:870
+#: ../libsvn_subr/prompt.c:869
 #, c-format
 msgid ""
 "\n"
@@ -7558,11 +7558,11 @@ msgid ""
 "-----------------------------------------------------------------------\n"
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:897
+#: ../libsvn_subr/prompt.c:896
 msgid "Store passphrase unencrypted (yes/no)? "
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:899
+#: ../libsvn_subr/prompt.c:898
 #, c-format
 msgid ""
 "\n"
@@ -7581,7 +7581,7 @@ msgid ""
 "-----------------------------------------------------------------------\n"
 msgstr ""
 
-#: ../libsvn_subr/prompt.c:945
+#: ../libsvn_subr/prompt.c:944
 #, c-format
 msgid "Password for '%s' GNOME keyring: "
 msgstr ""
@@ -7623,7 +7623,7 @@ msgstr ""
 msgid "Could not initialize SQLite"
 msgstr ""
 
-#: ../libsvn_subr/sqlite.c:1443
+#: ../libsvn_subr/sqlite.c:1444
 #, c-format
 msgid "SQLite hotcopy failed for %s"
 msgstr ""
@@ -7837,7 +7837,7 @@ msgstr ""
 
 #: ../libsvn_subr/version.c:139
 msgid ""
-"Copyright (C) 2015 The Apache Software Foundation.\n"
+"Copyright (C) 2016 The Apache Software Foundation.\n"
 "This software consists of contributions made by many people;\n"
 "see the NOTICE file for more information.\n"
 "Subversion is open source software, see http://subversion.apache.org/\n"
@@ -9954,22 +9954,22 @@ msgid ""
 "Local, non-commit operations do not take a log message or revision properties"
 msgstr ""
 
-#: ../svn/diff-cmd.c:210
+#: ../svn/diff-cmd.c:227
 msgid "'--xml' option only valid with '--summarize' option"
 msgstr ""
 
-#: ../svn/diff-cmd.c:301
+#: ../svn/diff-cmd.c:318
 msgid "'--new' option only valid with '--old' option"
 msgstr ""
 
-#: ../svn/diff-cmd.c:319
+#: ../svn/diff-cmd.c:336
 msgid ""
 "'svn diff [-r N[:M]] [TARGET[@REV]...]' does not support mixed target types. "
 "Try using the --old and --new options or one of the shorthand invocations "
 "listed in 'svn help diff'."
 msgstr ""
 
-#: ../svn/diff-cmd.c:376
+#: ../svn/diff-cmd.c:393
 #, c-format
 msgid "Path '%s' not relative to base URLs"
 msgstr ""
@@ -15397,30 +15397,30 @@ msgid ""
 "Type 'svnrdump help %s' for usage.\n"
 msgstr ""
 
-#: ../svnserve/cyrus_auth.c:119
+#: ../svnserve/cyrus_auth.c:121
 msgid "Could not initialize the SASL library"
 msgstr ""
 
-#: ../svnserve/cyrus_auth.c:191
+#: ../svnserve/cyrus_auth.c:193
 #, c-format
 msgid "Initial token is too long"
 msgstr ""
 
-#: ../svnserve/cyrus_auth.c:222
+#: ../svnserve/cyrus_auth.c:224
 #, c-format
 msgid "Step response is too long"
 msgstr ""
 
-#: ../svnserve/cyrus_auth.c:272
+#: ../svnserve/cyrus_auth.c:274
 #, c-format
 msgid "Can't get hostname"
 msgstr ""
 
-#: ../svnserve/cyrus_auth.c:329
+#: ../svnserve/cyrus_auth.c:331
 msgid "Could not obtain the list of SASL mechanisms"
 msgstr ""
 
-#: ../svnserve/cyrus_auth.c:372
+#: ../svnserve/cyrus_auth.c:374
 msgid "Couldn't obtain the authenticated username"
 msgstr ""
 
