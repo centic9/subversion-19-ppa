@@ -1,3 +1,9 @@
+subversion (1.9.4-0ubuntu0~ppa1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Thu, 28 Apr 2016 23:18:03 +0200
+
 subversion (1.9.3-3) unstable; urgency=medium
 
   * Remove transitional packages and maintainer snippets supporting upgrades
