@@ -14,7 +14,7 @@ python-builds
 examples-compile-instructions
 apache_module_dependency
 workaround_EINVAL_on_kfreebsd
-ruby-test-unit
+# applied upstream: ruby-test-unit
 ruby-frozen-nil
 r1722164-swig-cppflags
 swig3.x-compat

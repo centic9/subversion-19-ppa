@@ -14,11 +14,11 @@ Date:   Sun Nov 8 23:06:45 2015 -0500
        Also call svn_swig_rb_get_pool in order to deduplicate some
        pool-handling code.
 
-diff --git a/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c b/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c
-index a25ec5a..2210853 100644
---- a/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c
-+++ b/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c
-@@ -3230,14 +3230,16 @@ svn_swig_rb_make_stream(VALUE io)
+Index: git/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c
+===================================================================
+--- git.orig/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c	2016-04-29 19:50:08.763011916 +0200
++++ git/subversion/bindings/swig/ruby/libsvn_swig_ruby/swigutil_rb.c	2016-04-29 19:50:08.759012009 +0200
+@@ -3230,14 +3230,16 @@
      stream_p = &stream;
      r2c_swig_type2(io, "svn_stream_t *", (void **)stream_p);
    } else {

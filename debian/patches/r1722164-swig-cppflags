@@ -14,11 +14,11 @@ filtering out unsupported switches in SWIG_CPPFLAGS.
   (SWIG_CPPFLAGS): Filter out -Wdate-time
 
 
-Index: configure.ac
+Index: git/configure.ac
 ===================================================================
---- a/configure.ac	(revision 1722163)
-+++ b/configure.ac	(revision 1722164)
-@@ -1518,6 +1518,7 @@
+--- git.orig/configure.ac	2016-04-29 19:50:08.775011596 +0200
++++ git/configure.ac	2016-04-29 19:50:08.775011596 +0200
+@@ -1505,6 +1505,7 @@
  # Need to strip '-no-cpp-precomp' from CPPFLAGS for SWIG as well.
  SWIG_CPPFLAGS="$CPPFLAGS"
  SVN_STRIP_FLAG(SWIG_CPPFLAGS, [-no-cpp-precomp ])
@@ -26,5 +26,3 @@ Index: configure.ac
  AC_SUBST([SWIG_CPPFLAGS])
  
  dnl Since this is used only on Unix-y systems, define the path separator as '/'
-
-------------------------------------------------------------------------

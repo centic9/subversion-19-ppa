@@ -1,7 +1,7 @@
-Index: 1.9.x-r1721488/build/ac-macros/swig.m4
+Index: git/build/ac-macros/swig.m4
 ===================================================================
---- 1.9.x-r1721488/build/ac-macros/swig.m4	(revision 1723206)
-+++ 1.9.x-r1721488/build/ac-macros/swig.m4	(revision 1723207)
+--- git.orig/build/ac-macros/swig.m4	2016-04-29 19:50:08.823010394 +0200
++++ git/build/ac-macros/swig.m4	2016-04-29 19:50:08.787011299 +0200
 @@ -92,13 +92,12 @@
      #   packages/rpm/redhat-7.x/subversion.spec
      #   packages/rpm/rhel-3/subversion.spec
@@ -18,10 +18,10 @@ Index: 1.9.x-r1721488/build/ac-macros/swig.m4
      fi
    fi
   
-Index: 1.9.x-r1721488/subversion/bindings/swig/include/proxy.swg
+Index: git/subversion/bindings/swig/include/proxy.swg
 ===================================================================
---- 1.9.x-r1721488/subversion/bindings/swig/include/proxy.swg	(revision 1723206)
-+++ 1.9.x-r1721488/subversion/bindings/swig/include/proxy.swg	(revision 1723207)
+--- git.orig/subversion/bindings/swig/include/proxy.swg	2016-04-29 19:50:08.823010394 +0200
++++ git/subversion/bindings/swig/include/proxy.swg	2016-04-29 19:50:08.819010470 +0200
 @@ -60,51 +60,11 @@
          value.assert_valid()
  %}
@@ -78,10 +78,10 @@ Index: 1.9.x-r1721488/subversion/bindings/swig/include/proxy.swg
  %enddef
  
  /* Define a proxy for wrapping an existing struct */
-Index: 1.9.x-r1721488/subversion/bindings/swig/include/proxy.py
+Index: git/subversion/bindings/swig/include/proxy.py
 ===================================================================
---- 1.9.x-r1721488/subversion/bindings/swig/include/proxy.py	(nonexistent)
-+++ 1.9.x-r1721488/subversion/bindings/swig/include/proxy.py	(revision 1723207)
+--- /dev/null	1970-01-01 00:00:00.000000000 +0000
++++ git/subversion/bindings/swig/include/proxy.py	2016-04-29 19:50:08.819010470 +0200
 @@ -0,0 +1,41 @@
 +  def set_parent_pool(self, parent_pool=None):
 +    """Create a new proxy object for TYPE"""
@@ -124,10 +124,10 @@ Index: 1.9.x-r1721488/subversion/bindings/swig/include/proxy.py
 +    self.__dict__.setdefault("_members",{})[name] = value
 +
 +    return _swig_setattr(self, self.__class__, name, value)
-Index: 1.9.x-r1721488/subversion/bindings/swig/INSTALL
+Index: git/subversion/bindings/swig/INSTALL
 ===================================================================
---- 1.9.x-r1721488/subversion/bindings/swig/INSTALL	(revision 1723206)
-+++ 1.9.x-r1721488/subversion/bindings/swig/INSTALL	(revision 1723207)
+--- git.orig/subversion/bindings/swig/INSTALL	2016-04-29 19:50:08.823010394 +0200
++++ git/subversion/bindings/swig/INSTALL	2016-04-29 19:50:08.819010470 +0200
 @@ -65,7 +65,7 @@
  
  

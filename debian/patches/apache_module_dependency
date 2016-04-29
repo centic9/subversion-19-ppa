@@ -7,8 +7,8 @@ dependencies, mod_authz_svn is loaded first.
 
 Index: git/subversion/include/mod_dav_svn.h
 ===================================================================
---- git.orig/subversion/include/mod_dav_svn.h	2015-08-16 00:14:08.479478942 +0200
-+++ git/subversion/include/mod_dav_svn.h	2015-08-16 00:14:08.475478890 +0200
+--- git.orig/subversion/include/mod_dav_svn.h	2016-04-29 19:48:36.209415003 +0200
++++ git/subversion/include/mod_dav_svn.h	2016-04-29 19:48:36.181415744 +0200
 @@ -30,6 +30,7 @@
  
  #include <httpd.h>
@@ -17,7 +17,7 @@ Index: git/subversion/include/mod_dav_svn.h
  
  
  #ifdef __cplusplus
-@@ -83,6 +84,15 @@
+@@ -101,6 +102,15 @@
                                                   const char **repos_basename,
                                                   const char **relative_path,
                                                   const char **repos_path);
@@ -33,7 +33,7 @@ Index: git/subversion/include/mod_dav_svn.h
  
  
  /**
-@@ -91,6 +101,10 @@
+@@ -124,6 +134,10 @@
  AP_MODULE_DECLARE(dav_error *) dav_svn_get_repos_path(request_rec *r,
                                                        const char *root_path,
                                                        const char **repos_path);
@@ -46,8 +46,8 @@ Index: git/subversion/include/mod_dav_svn.h
  }
 Index: git/subversion/mod_authz_svn/mod_authz_svn.c
 ===================================================================
---- git.orig/subversion/mod_authz_svn/mod_authz_svn.c	2015-08-16 00:14:08.479478942 +0200
-+++ git/subversion/mod_authz_svn/mod_authz_svn.c	2015-08-16 00:14:08.475478890 +0200
+--- git.orig/subversion/mod_authz_svn/mod_authz_svn.c	2016-04-29 19:48:36.209415003 +0200
++++ git/subversion/mod_authz_svn/mod_authz_svn.c	2016-04-29 19:48:36.193415432 +0200
 @@ -22,7 +22,7 @@
   * ====================================================================
   */
@@ -57,7 +57,7 @@ Index: git/subversion/mod_authz_svn/mod_authz_svn.c
  
  #include <httpd.h>
  #include <http_config.h>
-@@ -108,6 +108,13 @@
+@@ -106,6 +106,13 @@
  #  define USE_FORCE_AUTHN 0
  #endif
  
@@ -71,7 +71,7 @@ Index: git/subversion/mod_authz_svn/mod_authz_svn.c
  /*
   * Configuration
   */
-@@ -1052,6 +1059,16 @@
+@@ -1078,6 +1085,16 @@
  }
  #endif
  
@@ -88,7 +88,7 @@ Index: git/subversion/mod_authz_svn/mod_authz_svn.c
  /*
   * Module flesh
   */
-@@ -1076,6 +1093,9 @@
+@@ -1102,6 +1119,9 @@
                         AUTHZ_SVN__SUBREQ_BYPASS_PROV_NAME,
                         AUTHZ_SVN__SUBREQ_BYPASS_PROV_VER,
                         (void*)subreq_bypass);
@@ -100,9 +100,9 @@ Index: git/subversion/mod_authz_svn/mod_authz_svn.c
  module AP_MODULE_DECLARE_DATA authz_svn_module =
 Index: git/subversion/mod_dav_svn/mod_dav_svn.c
 ===================================================================
---- git.orig/subversion/mod_dav_svn/mod_dav_svn.c	2015-08-16 00:14:08.479478942 +0200
-+++ git/subversion/mod_dav_svn/mod_dav_svn.c	2015-08-16 00:14:08.479478942 +0200
-@@ -1330,6 +1330,9 @@
+--- git.orig/subversion/mod_dav_svn/mod_dav_svn.c	2016-04-29 19:48:36.209415003 +0200
++++ git/subversion/mod_dav_svn/mod_dav_svn.c	2016-04-29 19:48:36.205415114 +0200
+@@ -1394,6 +1394,9 @@
  static void
  register_hooks(apr_pool_t *pconf)
  {
