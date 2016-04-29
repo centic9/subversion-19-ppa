@@ -1,3 +1,9 @@
+subversion (1.9.4-0ubuntu0~ppa4~xenial) xenial; urgency=medium
+
+  * Port to Xenial
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Fri, 29 Apr 2016 21:54:16 +0200
+
 subversion (1.9.4-0ubuntu0~ppa3) trusty; urgency=medium
 
   * Disable test-suite as there are lots of failing tests and I am not able to look at these.
