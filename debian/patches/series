@@ -16,4 +16,4 @@ workaround_EINVAL_on_kfreebsd
 ruby-frozen-nil
 r1722164-swig-cppflags
 swig3.x-compat
-verbose-tests
+perl-swig-crash
