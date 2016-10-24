@@ -1,3 +1,9 @@
+subversion (1.9.4-1ubuntu2) zesty; urgency=medium
+
+  * No-change rebuild for perl 5.24 transition
+
+ -- Iain Lane <iain@orangesquash.org.uk>  Mon, 24 Oct 2016 10:39:58 +0100
+
 subversion (1.9.4-1ubuntu1) yakkety; urgency=medium
 
   * Merge with Debian; remaining changes:
