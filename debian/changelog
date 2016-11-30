@@ -1,3 +1,20 @@
+subversion (1.9.5-1) unstable; urgency=medium
+
+  * New upstream release
+    + Security fix
+      - CVE-2016-8734: Unrestricted XML entity expansion in HTTP clients
+    + Fix corruption of "{DATE}" revision variable in swig-pl.  (Closes:
+      #843138)
+    + Remove patches:
+      - ruby-frozen-nil: Alternative fix committed upstream.
+      - Backported patches: perl-swig-crash, swig3.x-compat,
+        r1722164-swig-cppflags
+  * Fix #! lines for libsvn-{java,dev}.postinst.  (Closes: #843292, #843288)
+  * Remove maintainer scripts that were handling pre-Jessie changes.
+  * Use dh_apache2's substvars in libapache2-mod-svn.
+
+ -- James McCoy <jamessan@debian.org>  Tue, 29 Nov 2016 22:50:42 -0500
+
 subversion (1.9.4-3) unstable; urgency=medium
 
   * Build with hardening flags

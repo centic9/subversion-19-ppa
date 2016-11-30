@@ -55,6 +55,8 @@
       >Many enhancements and bug fixes</a></li>
   <li><a href="#issues"
       >Known issues in the release</a></li>
+  <li><a href="#troubleshooting"
+      >Troubleshooting issues specific to this release</a></li>
 </ul>
 
 <p>Apache Subversion 1.9 is a superset of all previous Subversion
@@ -168,64 +170,26 @@ and what impact these changes may have.</p>
 
 <p>Subversion 1.9 uses the same working copy format as Subversion 1.8.</p>
 
-<p>Before using Subversion 1.9 with existing an 1.6 or 1.7 working copy,
-users will be required to run the <tt>svn upgrade</tt> command to upgrade
-working copy metadata to the new format. This command may take a while, and
-for some users, it may be more practical to simply checkout a new working
-copy.</p>
-
-<p>Subversion 1.9 can only upgrade working copies created with Subversion 1.6
-and Subversion 1.7.</p>
+<p>Before using Subversion 1.9 with an existing Subversion 1.7 or older
+working copy, users will be required to run the <tt>svn upgrade</tt> command
+to upgrade working copy metadata to the new format. This command may take a
+while in some cases, and for some users, it may be more practical to simply
+checkout a new working copy.</p>
 
 <p><strong>Note:</strong> Subversion 1.9 cannot upgrade working copies that
 a 1.6 client would have refused to operate upon before an <tt>svn cleanup</tt>
 was run (with a 1.6 client).  In other words, before upgrading to 1.9, a 1.6
-client must be used to run <tt>svn cleanup</tt> on all 1.6 working copies that
-require cleanup.  Likewise, Subversion 1.9 cannot upgrade corrupt 1.6 working
-copies. Unfixable problems can arise from missing or corrupt meta-data inside
-<tt>.svn</tt> directories.  Such damage to the 1.6 working copy is permanent,
-and cannot be fixed even if <tt>svn cleanup</tt> is run prior to the upgrade.</p>
+or older client must be used to run <tt>svn cleanup</tt> on all 1.6 or older
+working copies that require cleanup.  Likewise, Subversion 1.9 cannot upgrade
+corrupt working copies. Unfixable problems can arise from missing or corrupt
+meta-data inside <tt>.svn</tt> directories.  Such damage to the working copy
+is permanent, and cannot be fixed even if <tt>svn cleanup</tt> is run prior
+to the upgrade.</p>
 
-<p>If your working copy does not upgrade cleanly, please check out a new one.</p>
+<p>If your working copy does not upgrade cleanly, please check out a new one.
+</p>
 
 </div>  <!-- wc-upgrade -->
-
-<!--
-<div class="h3" id="output-changes">
-<h3>Command Line Output Changes
-  <a class="sectionlink" href="#output-changes"
-    title="Link to this section">&para;</a>
-</h3>
-
-<p>Although we try hard to keep output from the command line programs
-compatible between releases, new information sometimes has to be
-added.  This can break scripts that rely on the exact format of the
-output.  For this reason, we encourage programs which consume the output
-of the commandline client to consider using the <tt>--xml</tt> option,
-or accessing Subversion through the various bindings interfaces.</p>
-
-### Insert items here, of the following form:
-<div class="h4" id="foo">
-<h4>Improved output of <tt>svn foo</tt>
-  <a class="sectionlink" href="#foo"
-    title="Link to this section">&para;</a>
-</h4>
-
-<p>The output of <tt>svn foo</tt> has been improved.  The following
-example illustrates these changes.</p>
-
-<pre>
-   $ svn foo
-   BAR
-   BAZ
-   BLAH
-   BIN
-   $ 
-</pre>
-
-</div>
-
-</div>  <!-- output-changes -->
 
 <div class="h3" id="compat-deps">
 <h3>Upgraded Minimal Dependencies
@@ -350,6 +314,7 @@ dump / load</a> cycle.  You can tell whether all format 7 features are enabled
 by looking for <tt>FSFS Logical Addressing: yes</tt> in the output of
 <tt>svnadmin info</tt>: if that line is printed, then the repository has
 all format 7 features enabled.
+</p>
 
 <div class="notice">
   <p><span style="color: red"><b>WARNING:</b></span> <b>Server restart
@@ -386,7 +351,7 @@ the benefits.
     <th>Format 6<br />or older</th>
     <th>Upgraded to format 7<br />from older formats</th>
     <th>Created as format 7<br />not packed</th>
-    <th>Created as format 7<br />packed</th>
+    <th>Created as format 7<br />packed</th></tr>
   <tr>
     <td>Reduction in dynamic memory usage<sup>1</sup></td>
     <td><span style="color: green"><b>yes</b></span></td>
@@ -674,14 +639,14 @@ in its documentation.  The following restrictions and workarounds apply:
   <li>The first entry must refer to the first revision in the pack file.
       This is a non-issue for unpacked revisions. A simple solution is
       inserting a line for empty section of length 0: 
-  </li>
-<pre>
+      <pre>
        Start       Length Type   Revision     Item 
            0            0 none       3000        0
            0          25a chgs       3999        1
          25a          3b9 chgs       3998        1
        ...
-</pre>
+     </pre>
+  </li>
 </ul>
 
 <p>These problems have been fixed in 1.9.1.
@@ -925,7 +890,7 @@ validation for various reasons (e.g. expired certificates).</p>
 this option.</p>
 
 <p>The <tt>--trust-server-cert-failures</tt> option only works in conjunction with
-the <tt>--no-interactive</tt> option.</p>
+the <tt>--non-interactive</tt> option.</p>
 
 <p>Previous versions of Subversion in non-interactive mode could only ignore
 certificates with an unknown certificate authority, but expired or otherwise
@@ -1081,7 +1046,7 @@ to see your system's defaults and whether the options are available at all.
 </h4>
   
 <p>This prints detailed format information for the given repository.
-<p>
+</p>
 
 <pre>
   $ svnadmin info /repos/apache/
@@ -1109,7 +1074,7 @@ to see your system's defaults and whether the options are available at all.
   
 <p>Packing now takes a cache size parameter (<tt>-M</tt>) which is used for
 efficient operation on <a href="#fsfs-format7">FSFS format 7 repositories</a>.
-<p>
+</p>
 
 <pre>
   $ svnadmin pack -M 1000 /path/to/repository
@@ -1170,7 +1135,7 @@ on the transaction (commit-in-progress) before it becomes a commit.</p>
 
 <p>The new <tt>delrevprop</tt> command deletes a revision property from either
 a revision or a transaction.  It complements <tt>setrevprop</tt> which adds
-or modifies revprops.</tt>
+or modifies revprops.</p>
 
 </div>  <!-- svnadmin-revprop -->
 
@@ -1504,6 +1469,54 @@ protocol.
 </div>  <!-- httpv1-commit-race -->
 
 </div>  <!-- issues -->
+
+<div class="h2" id="troubleshooting">
+<h2>Troubleshooting issues specific to this release
+  <a class="sectionlink" href="#troubleshooting"
+    title="Link to this section">&para;</a>
+</h2>
+
+<p>Subversion 1.9 introduces new features and makes use of new techniques
+which can trigger problems not encountered in previous versions. In contrast to
+known issues, things listed here are not due to some bug or issue in Subversion
+itself and therefore cannot be fixed with a new patch release.
+This section lists all known problems and provides instructions to solve them,
+if they occur.</p>
+
+<div class="h3" id="http-pipelining-issue">
+<h3>Lock/Unlock errors related to HTTP pipelining
+  <a class="sectionlink" href="#http-pipelining-issue"
+    title="Link to this section">&para;</a>
+</h3>
+
+<p>Subversion 1.9.0 introduces the use of HTTP pipelining for locking/unlocking
+multiple files. While SVN detects whether HTTP pipelining is supported (and
+falls back to non HTTP pipelining mode, if it isn't), issues can arrise, if
+there are flaws or bugs with any of the protocols/applications involved in
+processing pipelined HTTP requests.</p>
+
+<p>Especially, if there are older proxies present in the network topology, it's
+possible that you run into issues, since being a technology which was
+introduced in HTTP/1.1 (and the full performance benefit is not expected unless
+you are using HTTP/2), this feature might have not been extensively tested by
+your proxy vendor.</p>
+
+<p>To troubleshoot whether the proxy is causing an issue, try to lock/unlock
+multiple files bypassing the proxy. If that works, please get in touch with
+the proxy vendor to notify him about the problem and ask for support.</p>
+
+<p>It's also appreciated, if you would let the SVN developers know about the
+effected proxy via the users mailing list so this troubleshooting section can
+be updated.</p>
+
+<p>At the moment there is one potentially known proprietary proxy running into
+this issue: Java-SSL-tunnel. See
+<a href="http://tortoisesvn.tigris.org/ds/viewMessage.do?dsForumId=4061&amp;dsMessageId=3171337">Tortoise SVN mailing list</a>
+.</p>
+
+</div>  <!-- http-pipelining-issue -->
+
+</div>  <!-- troubleshooting -->
 
 <div class="h2" id="svn-1.7-deprecation">
 <h2>Subversion 1.7.x series no longer supported

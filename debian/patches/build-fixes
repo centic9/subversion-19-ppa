@@ -112,7 +112,7 @@ Fix some build problems:
      for fname in self.includes:
 --- a/configure.ac
 +++ b/configure.ac
-@@ -719,6 +719,7 @@
+@@ -722,6 +722,7 @@
  AC_SUBST(SVN_INTL_LIBS)
  
  AH_BOTTOM([
@@ -120,7 +120,7 @@ Fix some build problems:
  /* Indicate to translators that string X should be translated.  Do not look
     up the translation at run time; just expand to X.  This macro is suitable
     for use where a constant string is required at compile time. */
-@@ -1573,6 +1574,11 @@
+@@ -1577,6 +1578,11 @@
                     [Defined to the config.guess name of the build target])
  
  AC_OUTPUT

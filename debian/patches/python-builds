@@ -16,7 +16,7 @@ Submitted upstream: http://svn.haxx.se/dev/archive-2008-05/0361.shtml
  SWIG_PY_LINK = @SWIG_PY_LINK@
 --- a/build/ac-macros/swig.m4
 +++ b/build/ac-macros/swig.m4
-@@ -110,7 +110,8 @@
+@@ -109,7 +109,8 @@
      AC_CACHE_CHECK([for Python includes], [ac_cv_python_includes],[
        ac_cv_python_includes="`$PYTHON ${abs_srcdir}/build/get-py-info.py --includes`"
      ])
@@ -26,7 +26,7 @@ Submitted upstream: http://svn.haxx.se/dev/archive-2008-05/0361.shtml
  
      if test "$ac_cv_python_includes" = "none"; then
        AC_MSG_WARN([python bindings cannot be built without distutils module])
-@@ -296,6 +297,7 @@
+@@ -295,6 +296,7 @@
        AC_MSG_RESULT([$SWIG_RB_TEST_VERBOSE])
    fi
    AC_SUBST(SWIG)

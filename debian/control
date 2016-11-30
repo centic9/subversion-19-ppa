@@ -93,12 +93,10 @@ Description: Developer documentation for libsvn
 Package: libapache2-mod-svn
 Section: httpd
 Architecture: any
-Depends: apache2-api-20120211,
-# For CVE-2015-3184 fix
-         apache2-bin (>= 2.4.16),
-         libsvn1 (= ${binary:Version}),
+Depends: libsvn1 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: ${misc:Recommends}
 Suggests: db5.3-util
 Description: Apache Subversion server modules for Apache httpd
  This package provides the mod_dav_svn and mod_authz_svn modules for
