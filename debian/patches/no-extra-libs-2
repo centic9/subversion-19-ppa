@@ -2,8 +2,10 @@ Hack the apriconv library declaration not to pull in aprutil.  (It
 might be correct on Windows, I don't know, but we don't need apriconv
 _at all_, so we don't want it to pull in aprutil for us.)
 
---- a/subversion/bindings/swig/perl/native/Makefile.PL.in
-+++ b/subversion/bindings/swig/perl/native/Makefile.PL.in
+Index: git/subversion/bindings/swig/perl/native/Makefile.PL.in
+===================================================================
+--- git.orig/subversion/bindings/swig/perl/native/Makefile.PL.in	2016-04-29 19:48:35.801425832 +0200
++++ git/subversion/bindings/swig/perl/native/Makefile.PL.in	2016-04-29 19:48:35.797425932 +0200
 @@ -43,6 +43,12 @@
                                  fs_base fs_util fs_fs fs_x/);
  
@@ -44,8 +46,10 @@ _at all_, so we don't want it to pull in aprutil for us.)
      WriteMakefile(%config,
        MAKEFILE=> "Makefile.$_",
        NAME    => "SVN::_".perlish($_),
---- a/build.conf
-+++ b/build.conf
+Index: git/build.conf
+===================================================================
+--- git.orig/build.conf	2016-04-29 19:48:35.801425832 +0200
++++ git/build.conf	2016-04-29 19:50:28.000000000 +0200
 @@ -1381,7 +1381,7 @@
  
  [apriconv]
