@@ -1,3 +1,9 @@
+subversion (1.9.5-1ubuntu0~ppa1) trusty; urgency=medium
+
+  * Backport new upstream release.
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sat, 03 Dec 2016 22:54:43 +0100
+
 subversion (1.9.5-1) unstable; urgency=medium
 
   * New upstream release
