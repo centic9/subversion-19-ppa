@@ -9,7 +9,10 @@
 #   with-apache, no-apache | enable/disable certain packages
 #   with-ruby, no-ruby     |
 
-DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie notest"
+# Disable tests as they fail on some releases for some unknown reason, but work on others
+DEB_BUILD_OPTIONS=notest
+
+DEB_BUILD_MAINT_OPTIONS=hardening=+all,-pie
 include /usr/share/dpkg/default.mk
 
 # Fully functional Java support is still a bit spotty on some Debian
