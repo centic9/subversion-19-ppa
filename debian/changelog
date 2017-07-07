@@ -1,3 +1,9 @@
+subversion (1.9.6-0ubuntu0~ppa1) xenial; urgency=medium
+
+  * New upstream release
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Fri, 07 Jul 2017 14:26:10 +0200
+
 subversion (1.9.5-1ubuntu1) zesty; urgency=low
 
   * Merge from Debian unstable. Remaining changes:
@@ -61,7 +67,6 @@ subversion (1.9.5-1ubuntu0~ppa1) trusty; urgency=medium
   * Backport new upstream release.
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sat, 03 Dec 2016 22:54:43 +0100
->>>>>>> ppa/1.9.5-1
 
 subversion (1.9.5-1) unstable; urgency=medium
 
@@ -196,7 +201,6 @@ subversion (1.9.3-2) unstable; urgency=medium
 
  -- James McCoy <jamessan@debian.org>  Fri, 15 Jan 2016 22:45:33 -0500
 
-<<<<<<< HEAD
 subversion (1.9.3-1ubuntu1) xenial; urgency=medium
 
   * Merge with Debian; remaining changes:
@@ -206,7 +210,7 @@ subversion (1.9.3-1ubuntu1) xenial; urgency=medium
     - debian/patches/verbose-tests: Make tests verbose.
 
  -- Matthias Klose <doko@ubuntu.com>  Fri, 08 Jan 2016 10:04:26 +0100
-=======
+
 subversion (1.9.3-1ubuntu0~ppa1wily1) wily; urgency=medium
 
   * Port to wily
@@ -224,7 +228,6 @@ subversion (1.9.3-1ubuntu0~ppa1) trusty; urgency=medium
   * Backport to trusty.
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sun, 20 Dec 2015 17:40:16 +0100
->>>>>>> ppa/1.9.5-1
 
 subversion (1.9.3-1) unstable; urgency=high
 
@@ -411,7 +414,6 @@ subversion (1.9.0~rc1-1) experimental; urgency=medium
 
  -- James McCoy <jamessan@debian.org>  Mon, 11 May 2015 19:56:48 -0400
 
-<<<<<<< HEAD
 subversion (1.8.13-1ubuntu3) wily; urgency=medium
 
   * No-change rebuild to add ruby2.2 support.
@@ -439,7 +441,7 @@ subversion (1.8.13-1ubuntu2) wily; urgency=medium
     apache2-bin to make sure fix for CVE-2015-3185 is included.
 
  -- Marc Deslauriers <marc.deslauriers@ubuntu.com>  Wed, 19 Aug 2015 11:20:08 -0400
-=======
+
 subversion (1.8.14-0ubuntu1~trusty~ppa2) trusty; urgency=medium
 
   * Disable httpd version check for now.
@@ -452,7 +454,6 @@ subversion (1.8.14-0ubuntu1~trusty~ppa1) trusty; urgency=medium
   * Rebase to latest Ubuntu package 1.8.13-1ubuntu1
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sun, 16 Aug 2015 00:15:13 +0200
->>>>>>> ppa/1.9.5-1
 
 subversion (1.8.13-1ubuntu1) wily; urgency=medium
 
@@ -489,8 +490,6 @@ subversion (1.8.10-6) unstable; urgency=high
 
  -- James McCoy <jamessan@debian.org>  Tue, 31 Mar 2015 22:51:18 -0400
 
-<<<<<<< HEAD
-=======
 subversion (1.8.13-0ubuntu0~trusty~ppa5) trusty; urgency=medium
 
   * Use new version-scheme to override incorrect precise-version that 
@@ -525,7 +524,6 @@ subversion (1.8.13-0ubuntu0~ppa1) trusty; urgency=medium
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Tue, 31 Mar 2015 21:25:35 +0200
 
->>>>>>> ppa/1.9.5-1
 subversion (1.8.10-5ubuntu1) vivid; urgency=medium
 
   * Resynchronise with Debian.  Remaining changes:
@@ -628,15 +626,12 @@ subversion (1.8.10-1) unstable; urgency=medium
 
  -- James McCoy <jamessan@debian.org>  Tue, 12 Aug 2014 21:57:23 -0400
 
-<<<<<<< HEAD
-=======
 subversion (1.8.10-0ubuntu0~ppa1) trusty; urgency=medium
 
   * New upstream release.
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 11 Aug 2014 23:02:57 +0200
 
->>>>>>> ppa/1.9.5-1
 subversion (1.8.9-2ubuntu2) utopic; urgency=medium
 
   * Build using -O2 on ppc64el. Test failures with -O3.
@@ -680,8 +675,6 @@ subversion (1.8.9-1) unstable; urgency=medium
 
  -- James McCoy <jamessan@debian.org>  Tue, 20 May 2014 22:45:32 -0400
 
-<<<<<<< HEAD
-=======
 subversion (1.8.9-0ubuntu0~ppa3) trusty; urgency=medium
 
   * Revert some changes to successfully compile the package.
@@ -701,7 +694,6 @@ subversion (1.8.9-0ubuntu0~ppa1) precise; urgency=low
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Thu, 15 May 2014 21:17:08 +0200
 
->>>>>>> ppa/1.9.5-1
 subversion (1.8.8-2ubuntu1) utopic; urgency=medium
 
   * Merge with Debian; remaining changes:
@@ -720,10 +712,7 @@ subversion (1.8.8-2ubuntu1) utopic; urgency=medium
     - debian/control: added ruby-test-unit to Build-Depends
     - Check for libtoolize instead of libtool, which is not used for
       the build.
-<<<<<<< HEAD
-=======
     - Temporarily disable running the tests on powerpc.
->>>>>>> ppa/1.9.5-1
 
  -- Matthias Klose <doko@ubuntu.com>  Mon, 28 Apr 2014 16:37:04 +0200
 
@@ -789,8 +778,6 @@ subversion (1.8.5-2ubuntu3) trusty; urgency=medium
 
  -- Matthias Klose <doko@ubuntu.com>  Sat, 22 Feb 2014 14:39:49 +0100
 
-<<<<<<< HEAD
-=======
 subversion (1.8.8-0ubuntu0~ppa3) precise; urgency=low
 
   * Try to fix dependencies of libapaches-mod-svn for precise.
@@ -809,7 +796,6 @@ subversion (1.8.8-0ubuntu0~ppa1) precise; urgency=low
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Thu, 20 Feb 2014 20:07:50 +0100
 
->>>>>>> ppa/1.9.5-1
 subversion (1.8.5-2ubuntu2) trusty; urgency=medium
 
   * Make the python and ruby tests verbose.
@@ -902,8 +888,6 @@ subversion (1.8.5-1) unstable; urgency=low
 
  -- James McCoy <jamessan@debian.org>  Sun, 12 Jan 2014 19:48:33 -0500
 
-<<<<<<< HEAD
-=======
 subversion (1.8.5-0ubuntu0~ppa1) precise; urgency=low
 
   * New upstream release.
@@ -922,7 +906,6 @@ subversion (1.8.4) unstable; urgency=low
 
  -- Vitaliy Filippov <vitalif@mail.ru>  Thu, 07 Nov 2013 18:24:00 +0400
 
->>>>>>> ppa/1.9.5-1
 subversion (1.7.14-1ubuntu2) trusty; urgency=medium
 
   * Check for libtoolize instead of libtool, which is not used for
