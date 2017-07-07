@@ -2,8 +2,10 @@ It seems swig is generating _really_ bad code here, or something.
 Whatever it is, this line suppresses 1323 warnings, any of which might
 be real bugs with real consequences.
 
---- a/Makefile.in
-+++ b/Makefile.in
+Index: git/Makefile.in
+===================================================================
+--- git.orig/Makefile.in	2016-04-29 19:48:35.897423278 +0200
++++ git/Makefile.in	2016-04-29 19:50:23.000000000 +0200
 @@ -146,7 +146,7 @@
  SWIG_PY_LIBS = @SWIG_PY_LIBS@
  SWIG_PL_INCLUDES = @SWIG_PL_INCLUDES@

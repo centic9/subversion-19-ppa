@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Peter Samuelson <peter@p12n.org>
 Uploaders: James McCoy <jamessan@debian.org>
-Build-Depends: apache2-dev (>= 2.4.16),
+Build-Depends: apache2-dev (>= 2.4.7-1ubuntu4.5),
                autoconf,
                autotools-dev,
                bash-completion,
@@ -96,7 +96,10 @@ Description: Developer documentation for libsvn
 Package: libapache2-mod-svn
 Section: httpd
 Architecture: any
-Depends: libsvn1 (= ${binary:Version}),
+Depends: apache2-api-20120211,
+# For CVE-2015-3184 fix
+         apache2-bin (>= 2.4.7-1ubuntu4.5),
+         libsvn1 (= ${binary:Version}),
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: ${misc:Recommends}
