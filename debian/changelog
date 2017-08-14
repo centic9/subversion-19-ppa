@@ -1,3 +1,27 @@
+subversion (1.9.7-0ubuntu0~ppa2artful1) artful; urgency=medium
+
+  * Release to artful
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 14 Aug 2017 20:56:46 +0200
+
+subversion (1.9.7-0ubuntu0~ppa2zesty1) zesty; urgency=medium
+
+  * Release to zesty
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 14 Aug 2017 20:55:59 +0200
+
+subversion (1.9.7-0ubuntu0~ppa2yakkety1) yakkety; urgency=medium
+
+  * Release to yakkety
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 14 Aug 2017 20:53:20 +0200
+
+subversion (1.9.7-0ubuntu0~ppa2xenial1) xenial; urgency=medium
+
+  * Release to xenial
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 14 Aug 2017 20:48:50 +0200
+
 subversion (1.9.7-0ubuntu0~ppa2) xenial; urgency=medium
 
   * Refresh patch which broke in this release.
