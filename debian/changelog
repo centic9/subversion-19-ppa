@@ -1,3 +1,9 @@
+subversion (1.9.7-0ubuntu0~ppa1) xenial; urgency=medium
+
+  * New upstream release
+
+ -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Mon, 14 Aug 2017 14:22:16 +0200
+
 subversion (1.9.6-0ubuntu0~ppa1artful1) artful; urgency=medium
 
   * Release to artful
@@ -15,18 +21,6 @@ subversion (1.9.6-0ubuntu0~ppa1yakkety1) yakkety; urgency=medium
   * Release to yakkety
 
  -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sat, 08 Jul 2017 15:14:29 +0200
-
-subversion (1.9.6-0ubuntu0~ppa1xenial1) xenial; urgency=medium
-
-  * Release to xenial
-
- -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sat, 08 Jul 2017 15:14:01 +0200
-
-subversion (1.9.6-0ubuntu0~ppa1xenial1) xenial; urgency=medium
-
-  * Release to xenial
-
- -- Dominik Stadler (Ubuntu key) <dominik.stadler@gmx.at>  Sat, 08 Jul 2017 15:12:52 +0200
 
 subversion (1.9.6-0ubuntu0~ppa1xenial1) xenial; urgency=medium
 
